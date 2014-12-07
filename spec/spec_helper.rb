@@ -1,12 +1,15 @@
 ENV['WIT_AI_TOKEN'] = 'XXX'
 ENV['WUNDERGROUND_TOKEN'] = 'XXX'
 
+require 'bundler/setup'
 require 'wit_ruby'
 require 'fakeredis'
 require 'vcr'
 require 'webmock/rspec'
-
 require 'bitbot'
+
+require 'coveralls'
+Coveralls.wear!
 
 I18n.default_locale = :en
 Bitbot.configure do |c|

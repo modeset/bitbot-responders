@@ -1,6 +1,13 @@
 Bitbot Responders
 =================
 
+[![Dependency Status](https://gemnasium.com/modeset/bitbot-responders.svg)](https://gemnasium.com/modeset/bitbot-responders)
+[![Build Status](https://img.shields.io/travis/modeset/bitbot-responders.svg)](https://travis-ci.org/modeset/bitbot-responders)
+[![Code Climate](https://img.shields.io/codeclimate/github/modeset/bitbot-responders.svg)](https://codeclimate.com/github/modeset/bitbot-responders)
+[![Coverage Status](https://img.shields.io/coveralls/modeset/bitbot-responders.svg)](https://coveralls.io/r/modeset/bitbot-responders?branch=master)
+[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
+
 This is a collection of Bitbot responders intended for the
 [Bitbot](https://github.com/modeset/bitbot) Rack Slack bot.
 

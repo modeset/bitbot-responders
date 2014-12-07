@@ -1,7 +1,7 @@
 ruby '2.1.5'
 
 # core
-gem 'bitbot', path: '../bitbot' #github: 'modeset/bitbot'
+gem 'bitbot', github: 'modeset/bitbot'
 gem 'wit_ruby'
 gem 'redis'
 
@@ -13,4 +13,7 @@ group :development, :test do
   gem 'fakeredis', require: false
   gem 'webmock', require: false
   gem 'vcr', require: false
+
+  # io services
+  gem 'coveralls', require: false
 end
