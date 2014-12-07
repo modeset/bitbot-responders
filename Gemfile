@@ -16,5 +16,5 @@ group :development, :test do
   gem 'vcr', require: false
 
   # io services
-  gem 'coveralls', require: false
+  gem 'codeclimate-test-reporter', group: :test, require: false
 end

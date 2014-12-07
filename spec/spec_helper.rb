@@ -10,8 +10,8 @@ require 'fakeredis'
 require 'vcr'
 require 'webmock/rspec'
 
-require 'coveralls'
-Coveralls.wear!
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
 
 I18n.default_locale = :en
 Bitbot.configure do |c|
