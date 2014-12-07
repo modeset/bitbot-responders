@@ -2,11 +2,13 @@ ENV['WIT_AI_TOKEN'] = 'XXX'
 ENV['WUNDERGROUND_TOKEN'] = 'XXX'
 
 require 'bundler/setup'
+
+require 'bitbot'
 require 'wit_ruby'
+
 require 'fakeredis'
 require 'vcr'
 require 'webmock/rspec'
-require 'bitbot'
 
 require 'coveralls'
 Coveralls.wear!

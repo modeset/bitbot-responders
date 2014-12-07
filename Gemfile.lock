@@ -38,6 +38,7 @@ GEM
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     rack (1.5.2)
+    rake (10.4.2)
     redis (3.1.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -81,6 +82,7 @@ DEPENDENCIES
   coveralls
   fakeredis
   nokogiri
+  rake
   redis
   rspec
   vcr

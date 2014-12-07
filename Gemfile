@@ -9,7 +9,8 @@ gem 'redis'
 gem 'nokogiri'
 
 group :development, :test do
-  gem 'rspec', require: false
+  gem 'rake'
+  gem 'rspec'
   gem 'fakeredis', require: false
   gem 'webmock', require: false
   gem 'vcr', require: false
