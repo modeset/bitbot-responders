@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://autocomplete.wunderground.com/aq?query=Denver%20CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '493'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \"RESULTS\": [\n\t{\n\t\t\"name\": \"Denver, Colorado\", \n\t\t\"type\":
+        \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"80202.1.99999\",\n\t\t\"tz\":
+        \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\": \"/q/zmw:80202.1.99999\",\n\t\t\"ll\":
+        \"39.749840 -104.995598\",\n\t\t\"lat\": \"39.749840\",\n\t\t\"lon\": \"-104.995598\"\n\t},\n\t{\n\t\t\"name\":
+        \"Denver Country Club, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\":
+        \"US\",\n\t\t\"zmw\": \"80218.1.99999\",\n\t\t\"tz\": \"US3\",\n\t\t\"l\":
+        \"/q/locid:1027908\",\n\t\t\"ll\": \"39.720001 -104.970001\",\n\t\t\"lat\":
+        \"39.720001\",\n\t\t\"lon\": \"-104.970001\"\n\t}\n]\n}"
+    http_version: 
+  recorded_at: Sat, 01 Nov 2014 22:00:13 GMT
+- request:
+    method: get
+    uri: http://api.wunderground.com/api/XXX/conditions/q/zmw:80202.1.99999.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Creationtime:
+      - '0.067'
+      Last-Modified:
+      - Sat, 01 Nov 2014 22:00:13 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Sat, 01 Nov 2014 22:00:14 GMT
+      Cache-Control:
+      - max-age=0, no-cache
+      Pragma:
+      - no-cache
+      Date:
+      - Sat, 01 Nov 2014 22:00:14 GMT
+      Content-Length:
+      - '2679'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - DT=1414879213:22063:365-e9; path=/; expires=Fri, 01-Jan-2020 00:00:00 GMT;
+        domain=.wunderground.com
+    body:
+      encoding: UTF-8
+      string: "\n{\n  \"response\": {\n  \"version\":\"0.1\",\n  \"termsofService\":\"http://www.wunderground.com/weather/api/d/terms.html\",\n
+        \ \"features\": {\n  \"conditions\": 1\n  }\n\t}\n  ,\t\"current_observation\":
+        {\n\t\t\"image\": {\n\t\t\"url\":\"http://icons.wxug.com/graphics/wu2/logo_130x80.png\",\n\t\t\"title\":\"Weather
+        Underground\",\n\t\t\"link\":\"http://www.wunderground.com\"\n\t\t},\n\t\t\"display_location\":
+        {\n\t\t\"full\":\"Denver, CO\",\n\t\t\"city\":\"Denver\",\n\t\t\"state\":\"CO\",\n\t\t\"state_name\":\"Colorado\",\n\t\t\"country\":\"US\",\n\t\t\"country_iso3166\":\"US\",\n\t\t\"zip\":\"80202\",\n\t\t\"magic\":\"1\",\n\t\t\"wmo\":\"99999\",\n\t\t\"latitude\":\"39.74983978\",\n\t\t\"longitude\":\"-104.99559784\",\n\t\t\"elevation\":\"1600.00000000\"\n\t\t},\n\t\t\"observation_location\":
+        {\n\t\t\"full\":\"Geography and Env. Sciences, CU Denver, Denver, Colorado\",\n\t\t\"city\":\"Geography
+        and Env. Sciences, CU Denver, Denver\",\n\t\t\"state\":\"Colorado\",\n\t\t\"country\":\"US\",\n\t\t\"country_iso3166\":\"US\",\n\t\t\"latitude\":\"39.745201\",\n\t\t\"longitude\":\"-105.002403\",\n\t\t\"elevation\":\"5225
+        ft\"\n\t\t},\n\t\t\"estimated\": {\n\t\t},\n\t\t\"station_id\":\"KCODENVE78\",\n\t\t\"observation_time\":\"Last
+        Updated on November 1, 4:00 PM MDT\",\n\t\t\"observation_time_rfc822\":\"Sat,
+        01 Nov 2014 16:00:09 -0600\",\n\t\t\"observation_epoch\":\"1414879209\",\n\t\t\"local_time_rfc822\":\"Sat,
+        01 Nov 2014 16:00:13 -0600\",\n\t\t\"local_epoch\":\"1414879213\",\n\t\t\"local_tz_short\":\"MDT\",\n\t\t\"local_tz_long\":\"America/Denver\",\n\t\t\"local_tz_offset\":\"-0600\",\n\t\t\"weather\":\"Mostly
+        Cloudy\",\n\t\t\"temperature_string\":\"67.7 F (19.8 C)\",\n\t\t\"temp_f\":67.7,\n\t\t\"temp_c\":19.8,\n\t\t\"relative_humidity\":\"37%\",\n\t\t\"wind_string\":\"From
+        the NE at 5.0 MPH Gusting to 5.0 MPH\",\n\t\t\"wind_dir\":\"NE\",\n\t\t\"wind_degrees\":54,\n\t\t\"wind_mph\":5.0,\n\t\t\"wind_gust_mph\":\"5.0\",\n\t\t\"wind_kph\":8.0,\n\t\t\"wind_gust_kph\":\"8.0\",\n\t\t\"pressure_mb\":\"1005\",\n\t\t\"pressure_in\":\"29.68\",\n\t\t\"pressure_trend\":\"-\",\n\t\t\"dewpoint_string\":\"40
+        F (5 C)\",\n\t\t\"dewpoint_f\":40,\n\t\t\"dewpoint_c\":5,\n\t\t\"heat_index_string\":\"NA\",\n\t\t\"heat_index_f\":\"NA\",\n\t\t\"heat_index_c\":\"NA\",\n\t\t\"windchill_string\":\"NA\",\n\t\t\"windchill_f\":\"NA\",\n\t\t\"windchill_c\":\"NA\",\n\t\t\"feelslike_string\":\"67.7
+        F (19.8 C)\",\n\t\t\"feelslike_f\":\"67.7\",\n\t\t\"feelslike_c\":\"19.8\",\n\t\t\"visibility_mi\":\"10.0\",\n\t\t\"visibility_km\":\"16.1\",\n\t\t\"solarradiation\":\"272\",\n\t\t\"UV\":\"3.2\",\"precip_1hr_string\":\"0.00
+        in ( 0 mm)\",\n\t\t\"precip_1hr_in\":\"0.00\",\n\t\t\"precip_1hr_metric\":\"
+        0\",\n\t\t\"precip_today_string\":\"0.00 in (0 mm)\",\n\t\t\"precip_today_in\":\"0.00\",\n\t\t\"precip_today_metric\":\"0\",\n\t\t\"icon\":\"mostlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/mostlycloudy.gif\",\n\t\t\"forecast_url\":\"http://www.wunderground.com/US/CO/Denver.html\",\n\t\t\"history_url\":\"http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KCODENVE78\",\n\t\t\"ob_url\":\"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=39.745201,-105.002403\",\n\t\t\"nowcast\":\"\"\n\t}\n}\n"
+    http_version: 
+  recorded_at: Sat, 01 Nov 2014 22:00:13 GMT
+recorded_with: VCR 2.9.3

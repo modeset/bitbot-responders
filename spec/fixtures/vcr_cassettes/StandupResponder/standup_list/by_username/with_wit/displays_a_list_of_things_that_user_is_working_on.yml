@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20is%20archer%20working%20on%20today?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '328'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 10 Nov 2014 04:00:03 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "b105e52a-6769-4e61-aace-fc400a5e8cba",
+          "_text" : "what is archer working on today?",
+          "outcomes" : [ {
+            "_text" : "what is archer working on today?",
+            "intent" : "standup_list",
+            "entities" : {
+              "contact" : [ {
+                "value" : "archer"
+              } ]
+            },
+            "confidence" : 0.949
+          } ]
+        }
+    http_version: 
+  recorded_at: Mon, 10 Nov 2014 04:00:03 GMT
+recorded_with: VCR 2.9.3

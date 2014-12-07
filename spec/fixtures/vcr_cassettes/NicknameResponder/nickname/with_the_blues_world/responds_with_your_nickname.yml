@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://mess.be/inickgenbluesmalename.php
+    body:
+      encoding: US-ASCII
+      string: realname=archer
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - mess.be
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Nov 2014 22:51:32 GMT
+      Server:
+      - Apache/2.4.7 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.4.26
+      X-Powered-By:
+      - PHP/5.4.26
+      Content-Length:
+      - '2052'
+      Connection:
+      - close
+      Content-Type:
+      - text/html
+    body:
+      encoding: UTF-8
+      string: "<html> \n<head> \n  <title>Male Blues Singer MSN Nickname Construction
+        Kit</title> \n<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\n</head>
+        \n<body bgcolor=\"#FFFFFF\">\n<p><span class=\"boldText\"><font size=\"2\"><b><font
+        face=\"Verdana, Arial, Helvetica, sans-serif\" color=\"#006699\"><a href=\"inews.htm\"
+        target=\"_self\"><img src=\"_pictures/faqup.gif\" width=\"16\" height=\"16\"
+        border=\"0\" align=\"absbottom\"></a> \n  </font></b></font></span><b><font
+        face=\"Verdana, Arial, Helvetica, sans-serif\" class=\"normalText\">Main/News
+        \n  </font></b><span class=\"boldText\"><font size=\"2\"><b><font face=\"Verdana,
+        Arial, Helvetica, sans-serif\" color=\"#006699\"><span class=\"normalText\">&gt;
+        \n  </span><a href=\"javascript:history.back()\" class=\"noUnderlines\">Nickname
+        Construction \n  Kit</a><span class=\"boldText\"> &gt; Male Blues Singer MSN
+        Nickname Construction \n  Kit</span><span class=\"normalText\"> (you are here)</span></font></b></font></span></p>\n<p><span
+        class=\"boldText\"><font size=\"2\"><b><font face=\"Verdana, Arial, Helvetica,
+        sans-serif\" color=\"#006699\"><img src=\"_pictures/msnduo.gif\" width=\"16\"
+        height=\"16\" align=\"absbottom\"></font></b></font> \n  MALE BLUES SINGER
+        MSN NICKNAME CONSTRUCTION KIT<br>\n  </span></p>\n <form action=\"/inickgenbluesmalename.php\"
+        METHOD=\"POST\">\n  <p align=\"center\"><b class=\"normalText\">We love it
+        when you're in the news and \n    sing the blues... Moan your <span class=\"boldText\">full
+        name</span> and gently \n    push the button:<br>\n    </b><br>\n    <input
+        type=\"text\" name=\"realname\" size=25>\n    <input type=\"submit\" value=\"blues
+        me\" name=\"Submit\">\n  </p>\n  </form> \n\n<p align=\"center\"> \n<center><p><span
+        class='boldText'>archer</span><span class='normalText'> tonight in the club<br>you
+        will perform as </center><center><span class='boldText'> Blazin'\n Flatkeys\n
+        </span></font></font></p></center><p align=\"center\"><b><font face=\"Verdana,
+        Arial, Helvetica, sans-serif\" size=\"2\" class=\"normalText\">Engine \n  (c)
+        1998-2002 Astonish Inc. All rights reserved</font></b>.<br>\n  <span class=\"normalText\">Names
+        by <i>Dwergs.</i></span>\n"
+    http_version: 
+  recorded_at: Sun, 09 Nov 2014 22:51:40 GMT
+recorded_with: VCR 2.9.3

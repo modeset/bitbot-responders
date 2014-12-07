@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=give%20me%20a%20quote.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '218'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 18:55:36 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "88317f8a-40d8-45bc-9d7c-374aaee7d7b2",
+          "_text" : "give me a quote.",
+          "outcomes" : [ {
+            "_text" : "give me a quote.",
+            "intent" : "quote",
+            "entities" : { },
+            "confidence" : 0.988
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 18:55:35 GMT
+- request:
+    method: get
+    uri: http://www.iheartquotes.com/api/v1/random
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Etag:
+      - '"650a85929c76325c45a9a86b8731d8c7"'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Date:
+      - Sun, 02 Nov 2014 18:55:36 GMT
+      X-Runtime:
+      - '0.092592'
+      Content-Type:
+      - text/plain
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Server:
+      - thin 1.2.6 codename Crazy Delicious
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: "I AM NOT DELIGHTFULLY SAUCY\nI AM NOT DELIGHTFULLY SAUCY\nI AM NOT
+        DELIGHTFULLY SAUCY\nI AM NOT DELIGHTFULLY SAUCY\n\n\tBart Simpson on chalkboard
+        in episode 1F14\n\n[simpsons_chalkboard] http://iheartquotes.com/fortune/show/9016\n"
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 18:55:35 GMT
+recorded_with: VCR 2.9.3

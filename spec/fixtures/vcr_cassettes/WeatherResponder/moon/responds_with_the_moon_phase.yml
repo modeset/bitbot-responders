@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://autocomplete.wunderground.com/aq?query=Denver%20CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '493'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \"RESULTS\": [\n\t{\n\t\t\"name\": \"Denver, Colorado\", \n\t\t\"type\":
+        \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"80202.1.99999\",\n\t\t\"tz\":
+        \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\": \"/q/zmw:80202.1.99999\",\n\t\t\"ll\":
+        \"39.749840 -104.995598\",\n\t\t\"lat\": \"39.749840\",\n\t\t\"lon\": \"-104.995598\"\n\t},\n\t{\n\t\t\"name\":
+        \"Denver Country Club, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\":
+        \"US\",\n\t\t\"zmw\": \"80218.1.99999\",\n\t\t\"tz\": \"US3\",\n\t\t\"l\":
+        \"/q/locid:1027908\",\n\t\t\"ll\": \"39.720001 -104.970001\",\n\t\t\"lat\":
+        \"39.720001\",\n\t\t\"lon\": \"-104.970001\"\n\t}\n]\n}"
+    http_version: 
+  recorded_at: Sat, 01 Nov 2014 22:36:27 GMT
+- request:
+    method: get
+    uri: http://api.wunderground.com/api/XXX/astronomy/q/zmw:80202.1.99999.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Creationtime:
+      - '0.022'
+      Last-Modified:
+      - Sat, 01 Nov 2014 22:36:27 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Sat, 01 Nov 2014 22:36:27 GMT
+      Cache-Control:
+      - max-age=0, no-cache
+      Pragma:
+      - no-cache
+      Date:
+      - Sat, 01 Nov 2014 22:36:27 GMT
+      Content-Length:
+      - '558'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - DT=1414881387:19069:365-u4; path=/; expires=Fri, 01-Jan-2020 00:00:00 GMT;
+        domain=.wunderground.com
+    body:
+      encoding: UTF-8
+      string: "\n{\n  \"response\": {\n  \"version\":\"0.1\",\n  \"termsofService\":\"http://www.wunderground.com/weather/api/d/terms.html\",\n
+        \ \"features\": {\n  \"astronomy\": 1\n  }\n\t}\n\t\t,\t\"moon_phase\": {\n\t\t\"percentIlluminated\":\"70\",\n\t\t\"ageOfMoon\":\"9\",\n\t\t\"phaseofMoon\":\"Waxing
+        Gibbous\",\n\t\t\"hemisphere\":\"North\",\n\t\t\"current_time\": {\n\t\t\"hour\":\"16\",\n\t\t\"minute\":\"36\"\n\t\t},\n\t\t\"sunrise\":
+        {\n\t\t\"hour\":\"7\",\n\t\t\"minute\":\"28\"\n\t\t},\n\t\t\"sunset\": {\n\t\t\"hour\":\"17\",\n\t\t\"minute\":\"57\"\n\t\t}\n\t},\n\t\"sun_phase\":
+        {\n\t\t\"sunrise\": {\n\t\t\"hour\":\"7\",\n\t\t\"minute\":\"28\"\n\t\t},\n\t\t\"sunset\":
+        {\n\t\t\"hour\":\"17\",\n\t\t\"minute\":\"57\"\n\t\t}\n\t}\n}\n"
+    http_version: 
+  recorded_at: Sat, 01 Nov 2014 22:36:27 GMT
+recorded_with: VCR 2.9.3

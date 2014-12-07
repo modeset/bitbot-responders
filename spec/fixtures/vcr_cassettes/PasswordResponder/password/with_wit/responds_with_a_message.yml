@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=I%20need%20a%20password%2032%20characters%20long.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '345'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 01:49:43 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "66ae4b88-6ac1-44be-999c-65fb73e25f95",
+          "_text" : "I need a password 32 characters long.",
+          "outcomes" : [ {
+            "_text" : "I need a password 32 characters long.",
+            "intent" : "password",
+            "entities" : {
+              "number" : [ {
+                "type" : "value",
+                "value" : 32
+              } ]
+            },
+            "confidence" : 0.999
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 01:49:43 GMT
+- request:
+    method: get
+    uri: https://passwd.me/api/1.0/get_password.txt?charset=LOWERCASEALPHANUMERIC&length=32&type=pronounceable
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 02 Nov 2014 01:49:49 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '32'
+      Connection:
+      - keep-alive
+      Expires:
+      - Sun, 02 Nov 2014 01:49:49 GMT
+      Last-Modified:
+      - Sun, 02 Nov 2014 01:49:49 GMT
+      Etag:
+      - '"a45a90d90aded9b3aa30b996a166ea5e"'
+      Cache-Control:
+      - max-age=0
+    body:
+      encoding: UTF-8
+      string: gauyu1ngaradacihievureowew4rawhe
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 01:49:49 GMT
+recorded_with: VCR 2.9.3

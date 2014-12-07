@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://mess.be/pirate-names-male.php
+    body:
+      encoding: US-ASCII
+      string: realname=archer
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - mess.be
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Nov 2014 22:44:28 GMT
+      Server:
+      - Apache/2.4.7 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.4.26
+      X-Powered-By:
+      - PHP/5.4.26
+      Content-Length:
+      - '5009'
+      Connection:
+      - close
+      Content-Type:
+      - text/html
+    body:
+      encoding: UTF-8
+      string: "<html> \n<head> \n<title>MSN Namen or MSN Names: Male Pirate names</title>
+        \n<META NAME=\"description\" CONTENT=\"So you wanna be a mighty pirate?! Get
+        your pirate name here\">\n<META NAME=\"keywords\" CONTENT=\"msn names, msn
+        namen, pirate nickname, pirate nicknames, pirate names, pirate name, pirates
+        of the caribbean, the curse of the black pearl\">\n<link rel=\"stylesheet\"
+        href=\"mess.css\" type=\"text/css\">\n<!-- FASTCLICK.COM POP-UNDER CODE v1.7e
+        for mess.be -->\n<script language=\"javascript\"><!--\nvar doc=document;  var
+        url=escape(doc.location.href); var date_ob=new Date();\ndoc.cookie='h2=o;
+        path=/;';var bust=date_ob.getSeconds();\nif(doc.cookie.indexOf('e=llo') <=
+        0 && doc.cookie.indexOf('2=o') > 0){\ndoc.write('<scr'+'ipt language=\"javascript\"
+        src=\"http://media.fastclick.net');\ndoc.write('/w/pop.cgi?sid=6164&m=2&v=1.7e&u='+url+'&c='+bust+'\"></scr'+'ipt>');\ndate_ob.setTime(date_ob.getTime()+43200000);\ndoc.cookie='he=llo;
+        path=/; expires='+ date_ob.toGMTString();} // -->\n</script>\n<!-- FASTCLICK.COM
+        POP-UNDER CODE v1.7e for mess.be -->\n\n</head> \n<body bgcolor=\"#FFFFFF\">\n<p
+        class=\"normalText\"><a href=\"inews.htm\" target=\"_self\"><img src=\"_pictures/faqup.gif\"
+        width=\"16\" height=\"16\" border=\"0\" align=\"absbottom\" alt=\"msn messenger\"></a>
+        \n  <a href=\"http://www.mess.be/inews.shtml\" target=\"_self\">Main/News</a>
+        &gt; <a href=\"inickgen.htm\" target=\"_self\">MSN \n  Nickname Generators</a>
+        &gt; <b>Male Pirate Names for MSN Messenger</b> (you \n  are here)</p>\n<p
+        class=\"normalText\"><img src=\"_pictures/piratenamesicon.jpg\" width=\"19\"
+        height=\"19\" align=\"absbottom\" alt=\"pirate msn names\"> \n  <b> PIRATE
+        NICKNAMES FOR MSN MESSENGER (MALE VERSION)</b></p>\n<table width=\"100%\"
+        border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n  <tr>\n    <td>  <form
+        action=\"/pirate-names-male.php\" METHOD=\"POST\">\n        <p align=\"center\"
+        class=\"normalText\"><img src=\"/_pictures/piratenamesmale.jpg\" width=\"150\"
+        height=\"150\" align=\"left\" alt=\"pirate msn names\" border=\"1\"> \n          Avast,
+        ye scurvy dog! So you've seen Pirates of the Caribbean and you \n          wanna
+        be a mighty pirate ey? Tis bloody simple: Tockle your (full) name \n          give
+        the button a punch.<br>\n          <br>\n          <input type=\"text\" name=\"realname\"
+        size=25>\n          <input type=\"submit\" value=\"walk thee plank\" name=\"Submit\">\n
+        \       </p>\n  </form> \n\n<p align=\"center\"> \n<center><p class='normalText'>Arrrrgh
+        matey, send the name <b>archer</b> to davy jones's locker! You will commandeer
+        your ship as:<br><font size='3'><b> The Dread Pirate\n Swordfish\n </b></font><br>(Tisn't
+        the prettiest nickname, tis a nickname none the less)</p></center>      <p
+        align=\"center\" class=\"normalText\"><a href=\"http://www.mess.be/pirate-names-female.php\"
+        target=\"_self\">females</a> \n        click 'ere for a pirate name! \n    </td>\n
+        \ </tr>\n</table>\n<p align=\"center\" class=\"normalText\"> \n<script type=\"text/javascript\"><!--\ngoogle_ad_client
+        = \"pub-4883993179492893\";\ngoogle_alternate_ad_url = \"http://www.mess.be/_ads/az.htm\";\ngoogle_ad_width
+        = 468;\ngoogle_ad_height = 60;\ngoogle_ad_format = \"468x60_as\";\ngoogle_ad_channel
+        =\"7168010498\";\ngoogle_ad_type = \"text_image\";\ngoogle_page_url = document.location;\ngoogle_color_border
+        = \"FFFFFF\";\ngoogle_color_bg = \"FFFFFF\";\ngoogle_color_link = \"FF3300\";\ngoogle_color_url
+        = \"006666\";\ngoogle_color_text = \"006666\";\ngoogle_page_url = document.location;\n//--></script>\n<script
+        type=\"text/javascript\"\n  src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">\n</script>
+        \ <br>\n<p align=\"center\" class=\"normalText\">Need inspiration, pirate?
+        Look no further \n  for other cool <a href=\"http://www.mess.be/inickgen.htm\"
+        target=\"_self\">MSN \n  names</a>.<br>\n  We also have some pirate <a href=\"http://msn.mess.be/index.php\"
+        target=\"_self\">emoticons \n  and display pictures</a>. <a href=\"http://msn.mess.be/search.php\"
+        target=\"_self\">Search</a> \n  for the keywords <i>pirate </i>or <i>pirates</i>\n<p
+        align=\"center\" class=\"normalText\">&nbsp;\n<table width=\"75%\" border=\"1\"
+        cellspacing=\"0\" cellpadding=\"5\" align=\"center\" bordercolor=\"#CCCCCC\">\n
+        \ <tr> \n    <td class=\"normalText\"> \n      <p align=\"center\"><b>Tell
+        your </b>fellow swashbucklers where you got your \n        <b>Pirate Nickname</b>!
+        Select and copy (<i>Ctrl+C</i>) the link in the \n        textbox below and
+        paste it (<i>Ctrl+V</i>) into your conversations or \n        display name:</p>\n
+        \     <p align=\"center\"> Male pirate msn namen: \n        <input type=\"text\"
+        name=\"url\" value=\"http://www.mess.be/pirate-names-male.php\" size=\"45\">\n
+        \     </p>\n      <p align=\"center\">Female pirate msn namen: \n        <input
+        type=\"text\" name=\"url2\" value=\"http://www.mess.be/pirate-names-female.php\"
+        size=\"45\">\n      </p>\n    </td>\n  </tr>\n</table>\n<p align=\"center\"
+        class=\"normalText\"><span class=\"normalText\">Pirate Nicknames \n  by <i>dwergs
+        </i>from <a href=\"http://www.mess.be\" target=\"_self\">Mess with \n  MSN
+        Messenger</a></span>. With thanks to <i>Steve Jackson.<br>\n  </i>Image &copy;
+        2003 Disney Enterprises, Inc. and Jerry Bruckheimer, Inc. All \n  rights reserved.\n</body>\n</html>"
+    http_version: 
+  recorded_at: Sun, 09 Nov 2014 22:44:36 GMT
+recorded_with: VCR 2.9.3

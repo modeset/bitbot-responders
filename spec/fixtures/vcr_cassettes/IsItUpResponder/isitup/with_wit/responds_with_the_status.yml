@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=is%20ello.co%20up?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '283'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 10 Nov 2014 01:04:42 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "78fc6dac-a8c4-4766-b51a-369e47904c21",
+          "_text" : "is ello.co up?",
+          "outcomes" : [ {
+            "_text" : "is ello.co up?",
+            "intent" : "isitup",
+            "entities" : {
+              "url" : [ {
+                "value" : "ello.co"
+              } ]
+            },
+            "confidence" : 0.978
+          } ]
+        }
+    http_version: 
+  recorded_at: Mon, 10 Nov 2014 01:04:42 GMT
+- request:
+    method: get
+    uri: http://isitup.org/ello.co.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 10 Nov 2014 01:04:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=df61f6b71bbf0d66501cbcf42002d1df91415581482345; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.isitup.org; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - Is it up?/dac7c47 (earth.isitup.org)
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 186e5668a0cb0103-DFW
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "domain": "ello.co",
+            "port": 80,
+            "status_code": 1,
+            "response_ip": "192.225.208.18",
+            "response_code": 301,
+            "response_time": 0.038
+        }
+    http_version: 
+  recorded_at: Mon, 10 Nov 2014 01:04:42 GMT
+recorded_with: VCR 2.9.3

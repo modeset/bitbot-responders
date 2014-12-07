@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20is%20everyone%20working%20on%20today?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '334'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 10 Nov 2014 03:59:21 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "f56127c5-2b31-4d91-a024-472b2b3e6a3c",
+          "_text" : "what is everyone working on today?",
+          "outcomes" : [ {
+            "_text" : "what is everyone working on today?",
+            "intent" : "standup_list",
+            "entities" : {
+              "contact" : [ {
+                "value" : "everyone"
+              } ]
+            },
+            "confidence" : 0.991
+          } ]
+        }
+    http_version: 
+  recorded_at: Mon, 10 Nov 2014 03:59:21 GMT
+recorded_with: VCR 2.9.3

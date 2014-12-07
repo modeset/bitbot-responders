@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=my%20fortune%20for%20the%20day?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '234'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 01:55:41 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "50f24caa-0c63-45bd-b93e-5eebaa534eb5",
+          "_text" : "my fortune for the day?",
+          "outcomes" : [ {
+            "_text" : "my fortune for the day?",
+            "intent" : "fortune",
+            "entities" : { },
+            "confidence" : 0.978
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 01:55:41 GMT
+recorded_with: VCR 2.9.3

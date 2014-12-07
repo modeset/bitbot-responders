@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=give%20me%20some%20zen.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '218'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 09 Nov 2014 21:30:16 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "91bad071-bc46-453c-be77-411fc4571dc8",
+          "_text" : "give me some zen.",
+          "outcomes" : [ {
+            "_text" : "give me some zen.",
+            "intent" : "zen",
+            "entities" : { },
+            "confidence" : 0.952
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 09 Nov 2014 21:30:16 GMT
+- request:
+    method: get
+    uri: https://api.github.com/zen
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sun, 09 Nov 2014 21:30:16 GMT
+      Content-Type:
+      - text/plain;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '56'
+      X-Ratelimit-Reset:
+      - '1415571090'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 62F5CB5C:67D0:8038A7E:545FDCE8
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Vary:
+      - Accept-Encoding
+      X-Served-By:
+      - a241e1a8264a6ace03db946c85b92db3
+    body:
+      encoding: UTF-8
+      string: Avoid administrative distraction.
+    http_version: 
+  recorded_at: Sun, 09 Nov 2014 21:30:16 GMT
+recorded_with: VCR 2.9.3

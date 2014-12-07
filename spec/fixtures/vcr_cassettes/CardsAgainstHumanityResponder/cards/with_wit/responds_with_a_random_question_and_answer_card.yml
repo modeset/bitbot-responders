@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=give%20me%20some%20cards.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '228'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 17:46:57 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "767d308a-6024-4e21-8833-c651b6b341aa",
+          "_text" : "give me some cards.",
+          "outcomes" : [ {
+            "_text" : "give me some cards.",
+            "intent" : "cah_cards",
+            "entities" : { },
+            "confidence" : 0.985
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 17:46:56 GMT
+recorded_with: VCR 2.9.3

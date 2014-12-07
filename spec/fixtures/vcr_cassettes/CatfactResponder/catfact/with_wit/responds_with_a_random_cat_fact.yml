@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=I%20hate%20cats
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '210'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 01:52:26 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "592d6a33-8601-4580-981e-a22293dc5992",
+          "_text" : "I hate cats",
+          "outcomes" : [ {
+            "_text" : "I hate cats",
+            "intent" : "catfact",
+            "entities" : { },
+            "confidence" : 0.944
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 01:52:26 GMT
+recorded_with: VCR 2.9.3

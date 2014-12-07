@@ -1,0 +1,161 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://autocomplete.wunderground.com/aq?query=Denver%20CO
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '493'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \"RESULTS\": [\n\t{\n\t\t\"name\": \"Denver, Colorado\", \n\t\t\"type\":
+        \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"80202.1.99999\",\n\t\t\"tz\":
+        \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\": \"/q/zmw:80202.1.99999\",\n\t\t\"ll\":
+        \"39.749840 -104.995598\",\n\t\t\"lat\": \"39.749840\",\n\t\t\"lon\": \"-104.995598\"\n\t},\n\t{\n\t\t\"name\":
+        \"Denver Country Club, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\":
+        \"US\",\n\t\t\"zmw\": \"80218.1.99999\",\n\t\t\"tz\": \"US3\",\n\t\t\"l\":
+        \"/q/locid:1027908\",\n\t\t\"ll\": \"39.720001 -104.970001\",\n\t\t\"lat\":
+        \"39.720001\",\n\t\t\"lon\": \"-104.970001\"\n\t}\n]\n}"
+    http_version: 
+  recorded_at: Sat, 01 Nov 2014 22:11:08 GMT
+- request:
+    method: get
+    uri: http://api.wunderground.com/api/XXX/forecast/q/zmw:80202.1.99999.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Creationtime:
+      - '0.039'
+      Last-Modified:
+      - Sat, 01 Nov 2014 22:11:08 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Sat, 01 Nov 2014 22:11:09 GMT
+      Cache-Control:
+      - max-age=0, no-cache
+      Pragma:
+      - no-cache
+      Date:
+      - Sat, 01 Nov 2014 22:11:09 GMT
+      Content-Length:
+      - '7254'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - DT=1414879868:18150:365-v5; path=/; expires=Fri, 01-Jan-2020 00:00:00 GMT;
+        domain=.wunderground.com
+    body:
+      encoding: UTF-8
+      string: "\n{\n  \"response\": {\n  \"version\":\"0.1\",\n  \"termsofService\":\"http://www.wunderground.com/weather/api/d/terms.html\",\n
+        \ \"features\": {\n  \"forecast\": 1\n  }\n\t}\n\t\t,\n\t\"forecast\":{\n\t\t\"txt_forecast\":
+        {\n\t\t\"date\":\"2:37 PM MDT\",\n\t\t\"forecastday\": [\n\t\t{\n\t\t\"period\":0,\n\t\t\"icon\":\"clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/clear.gif\",\n\t\t\"title\":\"Saturday\",\n\t\t\"fcttext\":\"A
+        few clouds. Lows overnight in the mid 40s.\",\n\t\t\"fcttext_metric\":\"Mainly
+        clear. Low 6C.\",\n\t\t\"pop\":\"0\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":1,\n\t\t\"icon\":\"nt_clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_clear.gif\",\n\t\t\"title\":\"Saturday
+        Night\",\n\t\t\"fcttext\":\"A few passing clouds, otherwise generally clear.
+        Low 44F. Winds SSW at 5 to 10 mph.\",\n\t\t\"fcttext_metric\":\"Mainly clear.
+        Low 6C. Winds SSW at 10 to 15 km/h.\",\n\t\t\"pop\":\"0\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":2,\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/partlycloudy.gif\",\n\t\t\"title\":\"Sunday\",\n\t\t\"fcttext\":\"Intervals
+        of clouds and sunshine. High 71F. Winds SSW at 10 to 15 mph.\",\n\t\t\"fcttext_metric\":\"Partly
+        cloudy skies. High 22C. Winds SW at 15 to 25 km/h.\",\n\t\t\"pop\":\"0\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":3,\n\t\t\"icon\":\"nt_rain\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_rain.gif\",\n\t\t\"title\":\"Sunday
+        Night\",\n\t\t\"fcttext\":\"Mostly clear in the evening then becoming cloudy
+        with periods of rain after midnight. Low 37F. Winds N at 5 to 10 mph. Chance
+        of rain 80%.\",\n\t\t\"fcttext_metric\":\"Mostly clear in the evening then
+        becoming cloudy with periods of rain after midnight. Low 3C. Winds N at 10
+        to 15 km/h. Chance of rain 80%.\",\n\t\t\"pop\":\"80\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":4,\n\t\t\"icon\":\"rain\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/rain.gif\",\n\t\t\"title\":\"Monday\",\n\t\t\"fcttext\":\"Cloudy
+        and damp with rain in the morning...then becoming partly cloudy. High 49F.
+        Winds NNE at 5 to 10 mph. Chance of rain 70%.\",\n\t\t\"fcttext_metric\":\"Light
+        rain early...then remaining cloudy with showers in the afternoon. High 9C.
+        Winds NNE at 10 to 15 km/h. Chance of rain 70%.\",\n\t\t\"pop\":\"70\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":5,\n\t\t\"icon\":\"nt_partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif\",\n\t\t\"title\":\"Monday
+        Night\",\n\t\t\"fcttext\":\"A few clouds. Low 29F. Winds light and variable.\",\n\t\t\"fcttext_metric\":\"Clear
+        to partly cloudy. Low -2C. Winds light and variable.\",\n\t\t\"pop\":\"20\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":6,\n\t\t\"icon\":\"clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/clear.gif\",\n\t\t\"title\":\"Tuesday\",\n\t\t\"fcttext\":\"Mainly
+        sunny. High 57F. Winds SW at 5 to 10 mph.\",\n\t\t\"fcttext_metric\":\"Sunny.
+        High 14C. Winds light and variable.\",\n\t\t\"pop\":\"0\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":7,\n\t\t\"icon\":\"nt_clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_clear.gif\",\n\t\t\"title\":\"Tuesday
+        Night\",\n\t\t\"fcttext\":\"A mostly clear sky. Low 33F. Winds SSW at 5 to
+        10 mph.\",\n\t\t\"fcttext_metric\":\"Clear. Low around 0C. Winds SW at 10
+        to 15 km/h.\",\n\t\t\"pop\":\"0\"\n\t\t}\n\t\t]\n\t\t},\n\t\t\"simpleforecast\":
+        {\n\t\t\"forecastday\": [\n\t\t{\"date\":{\n\t\"epoch\":\"1414890000\",\n\t\"pretty\":\"7:00
+        PM MDT on November 01, 2014\",\n\t\"day\":1,\n\t\"month\":11,\n\t\"year\":2014,\n\t\"yday\":304,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"1\",\n\t\"monthname\":\"November\",\n\t\"monthname_short\":\"Nov\",\n\t\"weekday_short\":\"Sat\",\n\t\"weekday\":\"Saturday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"MDT\",\n\t\"tz_long\":\"America/Denver\"\n},\n\t\t\"period\":1,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"72\",\n\t\t\"celsius\":\"22\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"44\",\n\t\t\"celsius\":\"7\"\n\t\t},\n\t\t\"conditions\":\"Clear\",\n\t\t\"icon\":\"clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/clear.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":0,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        null,\n\t\t\"mm\": null\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": null,\n\t\t\"cm\": null\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 12,\n\t\t\"kph\":
+        19,\n\t\t\"dir\": \"\",\n\t\t\"degrees\": 0\n\t\t},\n\t\t\"avewind\": {\n\t\t\"mph\":
+        2,\n\t\t\"kph\": 2,\n\t\t\"dir\": \"East\",\n\t\t\"degrees\": 94\n\t\t},\n\t\t\"avehumidity\":
+        51,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\": 0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1414980000\",\n\t\"pretty\":\"7:00
+        PM MST on November 02, 2014\",\n\t\"day\":2,\n\t\"month\":11,\n\t\"year\":2014,\n\t\"yday\":305,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"0\",\n\t\"monthname\":\"November\",\n\t\"monthname_short\":\"Nov\",\n\t\"weekday_short\":\"Sun\",\n\t\"weekday\":\"Sunday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"MST\",\n\t\"tz_long\":\"America/Denver\"\n},\n\t\t\"period\":2,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"71\",\n\t\t\"celsius\":\"22\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"37\",\n\t\t\"celsius\":\"3\"\n\t\t},\n\t\t\"conditions\":\"Partly
+        Cloudy\",\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/partlycloudy.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":0,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.13,\n\t\t\"mm\": 3\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.13,\n\t\t\"mm\":
+        3\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 15,\n\t\t\"kph\":
+        24,\n\t\t\"dir\": \"SSW\",\n\t\t\"degrees\": 213\n\t\t},\n\t\t\"avewind\":
+        {\n\t\t\"mph\": 12,\n\t\t\"kph\": 19,\n\t\t\"dir\": \"SSW\",\n\t\t\"degrees\":
+        213\n\t\t},\n\t\t\"avehumidity\": 34,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\":
+        0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1415066400\",\n\t\"pretty\":\"7:00
+        PM MST on November 03, 2014\",\n\t\"day\":3,\n\t\"month\":11,\n\t\"year\":2014,\n\t\"yday\":306,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"0\",\n\t\"monthname\":\"November\",\n\t\"monthname_short\":\"Nov\",\n\t\"weekday_short\":\"Mon\",\n\t\"weekday\":\"Monday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"MST\",\n\t\"tz_long\":\"America/Denver\"\n},\n\t\t\"period\":3,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"49\",\n\t\t\"celsius\":\"9\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"29\",\n\t\t\"celsius\":\"-2\"\n\t\t},\n\t\t\"conditions\":\"Rain\",\n\t\t\"icon\":\"rain\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/rain.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":70,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.07,\n\t\t\"mm\": 2\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.07,\n\t\t\"mm\": 2\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 10,\n\t\t\"kph\":
+        16,\n\t\t\"dir\": \"NNE\",\n\t\t\"degrees\": 22\n\t\t},\n\t\t\"avewind\":
+        {\n\t\t\"mph\": 7,\n\t\t\"kph\": 11,\n\t\t\"dir\": \"NNE\",\n\t\t\"degrees\":
+        22\n\t\t},\n\t\t\"avehumidity\": 72,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\":
+        0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1415152800\",\n\t\"pretty\":\"7:00
+        PM MST on November 04, 2014\",\n\t\"day\":4,\n\t\"month\":11,\n\t\"year\":2014,\n\t\"yday\":307,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"0\",\n\t\"monthname\":\"November\",\n\t\"monthname_short\":\"Nov\",\n\t\"weekday_short\":\"Tue\",\n\t\"weekday\":\"Tuesday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"MST\",\n\t\"tz_long\":\"America/Denver\"\n},\n\t\t\"period\":4,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"57\",\n\t\t\"celsius\":\"14\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"33\",\n\t\t\"celsius\":\"1\"\n\t\t},\n\t\t\"conditions\":\"Clear\",\n\t\t\"icon\":\"clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/clear.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":0,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 10,\n\t\t\"kph\":
+        16,\n\t\t\"dir\": \"SW\",\n\t\t\"degrees\": 223\n\t\t},\n\t\t\"avewind\":
+        {\n\t\t\"mph\": 6,\n\t\t\"kph\": 10,\n\t\t\"dir\": \"SW\",\n\t\t\"degrees\":
+        223\n\t\t},\n\t\t\"avehumidity\": 40,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\":
+        0\n\t\t}\n\t\t]\n\t\t}\n\t}\n}\n"
+    http_version: 
+  recorded_at: Sat, 01 Nov 2014 22:11:08 GMT
+recorded_with: VCR 2.9.3

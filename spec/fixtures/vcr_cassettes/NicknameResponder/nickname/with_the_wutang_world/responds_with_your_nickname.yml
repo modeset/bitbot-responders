@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://mess.be/inickgenwuname.php
+    body:
+      encoding: US-ASCII
+      string: realname=archer
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - mess.be
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Nov 2014 22:46:20 GMT
+      Server:
+      - Apache/2.4.7 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.4.26
+      X-Powered-By:
+      - PHP/5.4.26
+      Content-Length:
+      - '4061'
+      Connection:
+      - close
+      Content-Type:
+      - text/html
+    body:
+      encoding: UTF-8
+      string: "<html> \n<head> \n  <title>Wu-Tang Name Generator</title> \n<meta name=\"description\"
+        content=\"Wu-Tang Names Generator (as heard on Jay Leno)\" />\n<meta property=\"og:title\"
+        content=\"Wu-Tang Name Generator\"/>\n<meta property=\"og:site_name\" content=\"Mess
+        with Messenger\"/>\n<meta property=\"og:image\" content=\"http://www.mess.be/_pictures/wutangnickname.gif\"/>\n<link
+        rel=\"stylesheet\" href=\"http://www.mess.be/mess.css\" type=\"text/css\">\n</head>
+        \n<body bgcolor=\"#FFFFFF\">\n<script type=\"text/javascript\">\n\n  var _gaq
+        = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-4997399-1']);\n  _gaq.push(['_trackPageview']);\n\n
+        \ (function() {\n    var ga = document.createElement('script'); ga.type =
+        'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol
+        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var
+        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\n  })();\n\n</script>\n<p class=\"normalText\">Main/News &gt; <a href=\"http://www.mess.be/inickgen.htm\">MSN
+        Nickname Generators</a> &gt; <strong>Wu-Tang Name Generator</strong> (you
+        are here)</p>\n<p class=\"normalText\"><img src=\"_pictures/msnduo.gif\" width=\"16\"
+        height=\"16\" align=\"absbottom\" alt=\"Wu-Tang Names\"> <strong>WU-TANG NAMES
+        GENERATOR</strong></p>\n<table width=\"95%\" border=\"0\">\n  <tr>\n    <td
+        valign=\"top\"><img src=\"http://mess.be/_pictures/wutangnickname.gif\" width=\"263\"
+        height=\"104\" alt=\"Wu-Tang Name Generator\"></td>\n    <td><p class=\"normalText\">Ooooh
+        baby, do you like it <I>raaaaawwwwww</I>? Join <i>Ghostface Killah, Inspectah
+        \n  Deck, Method Man, RZA, GZA, Raekwon</i>, the late <i>Ol' Dirty Bastard</i>
+        and the other Staten Island, New York clan members using this <strong>Wu-Tang
+        Names Generator</strong>.<br>\n  Become a real <b>Wu warrior</b>, entah ur
+        <b>full name</b> 'n smack da ol' dirty button</p>\n    </td>\n  </tr>\n</table>\n
+        \ <form action=\"/inickgenwuname.php\" METHOD=\"POST\">\n      <div align=\"center\"><input
+        type=\"text\" name=\"realname\" size=25>&nbsp; \n      <input type=\"submit\"
+        value=\"Enter the Wu-Tang\" name=\"Submit\">\n      </div>\n</form> \n\n<p
+        align=\"center\"> \n\n<center><b><font class=normalText>archer</b> from this
+        day forward <br>you will also be known as </center><center><b><font size=2>Ruff\n
+        Ambassador\n</b></font></center><center><br /><a href='https://twitter.com/share'
+        class='twitter-share-button' data-text='From this day forward, I will be known
+        as... Ruff\n Ambassador\n -And your Wu-Tang name?' data-via='WuTangName' data-related='reface_me'
+        data-url='http://bit.ly/wutangnamegenerator' data-hashtags='WuTang'>Tweet</a>\n<script>!function(d,s,id){var
+        js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script></center>\n<center><p
+        class=\"normalText\"><b>UPDATE</b>: Like the Wu-Tang Name Generator on Facebook
+        and share your Wu name on our page! And stay tuned for a massive update, cheats,
+        etc.</p>\n\n<p align=\"center\"><iframe src=\"//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FWuTangNameGenerator&amp;width=300&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=true&amp;appId=274720212622392\"
+        scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:300px;
+        height:62px;\" allowTransparency=\"true\"></iframe></p>\n<p class=\"normalText\">A
+        big thanks to Huffington Post, Mashable and, of course, <strong>Donald Glover</strong>,
+        whose Wu-Tang name is <strong>Childish Gambino</strong>, for the mention on
+        The Tonight Show with Jay Leno!</p></center>\n\n<p class=\"normalText\" align=\"center\">More
+        <a href=\"http://www.mess.be/inickgen.htm\" target=\"main\">MSN Nicknames</a>...\n<p
+        class=\"normalText\" align=\"center\">Check out our <a href=\"http://msn.mess.be/categories.php?cat_id=113\"
+        target=\"main\">Hip Hop MSN Display Pictures</a>.\n<p class=\"normalText\"
+        align=\"center\">Made in 2002. Bittah Leader: <a href=\"http://facebook.com/ptrdm\"
+        rel=\"nofollow\">Pieter Dom</a></p>"
+    http_version: 
+  recorded_at: Sun, 09 Nov 2014 22:46:27 GMT
+recorded_with: VCR 2.9.3

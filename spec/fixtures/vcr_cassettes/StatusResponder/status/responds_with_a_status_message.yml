@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://status.heroku.com/api/v3/current-status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 09 Nov 2014 23:08:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"c77339a0d1b9b40ef4530d17a2e857a7"'
+      X-Request-Id:
+      - 2a6b498f55ee71b32bb83f93cd90f7d9
+      X-Runtime:
+      - '0.011251'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"status":{"Production":"green","Development":"yellow"},"issues":[{"created_at":"2014-11-06T17:03:03Z","id":682,"resolved":false,"status_dev":"yellow","status_prod":"green","title":"Issues provisioning log drains","upcoming":false,"updated_at":"2014-11-06T17:58:14Z","href":"https://status.heroku.com/api/v3/issues/682","full_url":"https://status.heroku.com/incidents/682","updates": []}]}'
+    http_version: 
+  recorded_at: Sun, 09 Nov 2014 23:08:32 GMT
+recorded_with: VCR 2.9.3

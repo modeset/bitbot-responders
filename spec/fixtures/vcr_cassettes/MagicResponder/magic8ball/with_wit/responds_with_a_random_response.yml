@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what's%20the%208%20ball%20say%20about%20me%20getting%20laid%20tonight?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '295'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 01:57:38 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "5110ad85-8552-4914-829a-be07d7958f27",
+          "_text" : "what's the 8 ball say about me getting laid tonight?",
+          "outcomes" : [ {
+            "_text" : "what's the 8 ball say about me getting laid tonight?",
+            "intent" : "magic8ball",
+            "entities" : { },
+            "confidence" : 0.998
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 01:57:38 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,219 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20are%20the%20weather%20conditions%20in%20Denver?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '345'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 02:06:15 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "e33447ca-1488-47c9-bc6d-b24557894180",
+          "_text" : "what are the weather conditions in Denver?",
+          "outcomes" : [ {
+            "_text" : "what are the weather conditions in Denver?",
+            "intent" : "weather_conditions",
+            "entities" : {
+              "location" : [ {
+                "value" : "Denver"
+              } ]
+            },
+            "confidence" : 1.0
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 02:06:15 GMT
+- request:
+    method: get
+    uri: http://autocomplete.wunderground.com/aq?query=Denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '5089'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \"RESULTS\": [\n\t{\n\t\t\"name\": \"Denver, Colorado\", \n\t\t\"type\":
+        \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"80202.1.99999\",\n\t\t\"tz\":
+        \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\": \"/q/zmw:80202.1.99999\",\n\t\t\"ll\":
+        \"39.749840 -104.995598\",\n\t\t\"lat\": \"39.749840\",\n\t\t\"lon\": \"-104.995598\"\n\t},\n\t{\n\t\t\"name\":
+        \"Denver City, Texas\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"79323.1.99999\",\n\t\t\"tz\": \"America/Chicago\",\n\t\t\"tzs\": \"CDT\",\n\t\t\"l\":
+        \"/q/zmw:79323.1.99999\",\n\t\t\"ll\": \"32.968433 -102.827766\",\n\t\t\"lat\":
+        \"32.968433\",\n\t\t\"lon\": \"-102.827766\"\n\t},\n\t{\n\t\t\"name\": \"Denver,
+        Pennsylvania\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"17517.1.99999\",\n\t\t\"tz\": \"America/New_York\",\n\t\t\"tzs\": \"EDT\",\n\t\t\"l\":
+        \"/q/zmw:17517.1.99999\",\n\t\t\"ll\": \"40.242817 -76.136276\",\n\t\t\"lat\":
+        \"40.242817\",\n\t\t\"lon\": \"-76.136276\"\n\t},\n\t{\n\t\t\"name\": \"Denver,
+        Iowa\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"50622.1.99999\",\n\t\t\"tz\":
+        \"America/Chicago\",\n\t\t\"tzs\": \"CDT\",\n\t\t\"l\": \"/q/zmw:50622.1.99999\",\n\t\t\"ll\":
+        \"42.669563 -92.334213\",\n\t\t\"lat\": \"42.669563\",\n\t\t\"lon\": \"-92.334213\"\n\t},\n\t{\n\t\t\"name\":
+        \"Denver Artcc, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"80501.3.99999\",\n\t\t\"tz\": \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\":
+        \"/q/zmw:80501.3.99999\",\n\t\t\"ll\": \"40.187206 -105.126648\",\n\t\t\"lat\":
+        \"40.187206\",\n\t\t\"lon\": \"-105.126648\"\n\t},\n\t{\n\t\t\"name\": \"Denver
+        Centennial, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"80112.15.99999\",\n\t\t\"tz\": \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\":
+        \"/q/zmw:80112.15.99999\",\n\t\t\"ll\": \"39.570000 -104.849998\",\n\t\t\"lat\":
+        \"39.570000\",\n\t\t\"lon\": \"-104.849998\"\n\t},\n\t{\n\t\t\"name\": \"Denver
+        Federal Center Helistop, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\":
+        \"US\",\n\t\t\"zmw\": \"80225.3.99999\",\n\t\t\"tz\": \"America/Denver\",\n\t\t\"tzs\":
+        \"MDT\",\n\t\t\"l\": \"/q/zmw:80225.3.99999\",\n\t\t\"ll\": \"39.723320 -105.110817\",\n\t\t\"lat\":
+        \"39.723320\",\n\t\t\"lon\": \"-105.110817\"\n\t},\n\t{\n\t\t\"name\": \"Denver
+        Health, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"80273.9.99999\",\n\t\t\"tz\": \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\":
+        \"/q/zmw:80273.9.99999\",\n\t\t\"ll\": \"39.727486 -104.990814\",\n\t\t\"lat\":
+        \"39.727486\",\n\t\t\"lon\": \"-104.990814\"\n\t},\n\t{\n\t\t\"name\": \"Denver
+        International, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"80019.3.99999\",\n\t\t\"tz\": \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\":
+        \"/q/zmw:80019.3.99999\",\n\t\t\"ll\": \"39.858334 -104.666946\",\n\t\t\"lat\":
+        \"39.858334\",\n\t\t\"lon\": \"-104.666946\"\n\t},\n\t{\n\t\t\"name\": \"Denver
+        Of The East, North Carolina\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"28037.3.99999\",\n\t\t\"tz\": \"America/New_York\",\n\t\t\"tzs\": \"EDT\",\n\t\t\"l\":
+        \"/q/zmw:28037.3.99999\",\n\t\t\"ll\": \"35.493469 -80.965637\",\n\t\t\"lat\":
+        \"35.493469\",\n\t\t\"lon\": \"-80.965637\"\n\t},\n\t{\n\t\t\"name\": \"Denver
+        Police Department-District 3, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\":
+        \"US\",\n\t\t\"zmw\": \"80243.3.99999\",\n\t\t\"tz\": \"America/Denver\",\n\t\t\"tzs\":
+        \"MDT\",\n\t\t\"l\": \"/q/zmw:80243.3.99999\",\n\t\t\"ll\": \"39.687489 -104.959702\",\n\t\t\"lat\":
+        \"39.687489\",\n\t\t\"lon\": \"-104.959702\"\n\t},\n\t{\n\t\t\"name\": \"Denver
+        Water Department, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"80204.3.99999\",\n\t\t\"tz\": \"America/Denver\",\n\t\t\"tzs\": \"MDT\",\n\t\t\"l\":
+        \"/q/zmw:80204.3.99999\",\n\t\t\"ll\": \"39.729431 -105.009430\",\n\t\t\"lat\":
+        \"39.729431\",\n\t\t\"lon\": \"-105.009430\"\n\t},\n\t{\n\t\t\"name\": \"Denver,
+        Illinois\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"62321.3.99999\",\n\t\t\"tz\":
+        \"America/Chicago\",\n\t\t\"tzs\": \"CDT\",\n\t\t\"l\": \"/q/zmw:62321.3.99999\",\n\t\t\"ll\":
+        \"40.290558 -91.106941\",\n\t\t\"lat\": \"40.290558\",\n\t\t\"lon\": \"-91.106941\"\n\t},\n\t{\n\t\t\"name\":
+        \"Denver, Indiana\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"46926.1.99999\",\n\t\t\"tz\": \"America/Indianapolis\",\n\t\t\"tzs\": \"EDT\",\n\t\t\"l\":
+        \"/q/zmw:46926.1.99999\",\n\t\t\"ll\": \"40.882919 -86.065498\",\n\t\t\"lat\":
+        \"40.882919\",\n\t\t\"lon\": \"-86.065498\"\n\t},\n\t{\n\t\t\"name\": \"Denver,
+        Kentucky\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"41222.3.99999\",\n\t\t\"tz\":
+        \"America/New_York\",\n\t\t\"tzs\": \"EDT\",\n\t\t\"l\": \"/q/zmw:41222.3.99999\",\n\t\t\"ll\":
+        \"37.797215 -82.818649\",\n\t\t\"lat\": \"37.797215\",\n\t\t\"lon\": \"-82.818649\"\n\t},\n\t{\n\t\t\"name\":
+        \"Denver, Missouri\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"64441.1.99999\",\n\t\t\"tz\": \"America/Chicago\",\n\t\t\"tzs\": \"CDT\",\n\t\t\"l\":
+        \"/q/zmw:64441.1.99999\",\n\t\t\"ll\": \"40.428120 -94.289940\",\n\t\t\"lat\":
+        \"40.428120\",\n\t\t\"lon\": \"-94.289940\"\n\t},\n\t{\n\t\t\"name\": \"Denver,
+        New York\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"12421.1.99999\",\n\t\t\"tz\":
+        \"America/New_York\",\n\t\t\"tzs\": \"EDT\",\n\t\t\"l\": \"/q/zmw:12421.1.99999\",\n\t\t\"ll\":
+        \"42.270107 -74.532120\",\n\t\t\"lat\": \"42.270107\",\n\t\t\"lon\": \"-74.532120\"\n\t},\n\t{\n\t\t\"name\":
+        \"Denver, North Carolina\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"28037.1.99999\",\n\t\t\"tz\": \"America/New_York\",\n\t\t\"tzs\": \"EDT\",\n\t\t\"l\":
+        \"/q/zmw:28037.1.99999\",\n\t\t\"ll\": \"35.512753 -81.017082\",\n\t\t\"lat\":
+        \"35.512753\",\n\t\t\"lon\": \"-81.017082\"\n\t},\n\t{\n\t\t\"name\": \"Denver,
+        Tennessee\", \n\t\t\"type\": \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\":
+        \"37134.2.99999\",\n\t\t\"tz\": \"America/Chicago\",\n\t\t\"tzs\": \"CDT\",\n\t\t\"l\":
+        \"/q/zmw:37134.2.99999\",\n\t\t\"ll\": \"36.011993 -87.965782\",\n\t\t\"lat\":
+        \"36.011993\",\n\t\t\"lon\": \"-87.965782\"\n\t},\n\t{\n\t\t\"name\": \"Denver
+        Academy of Court Reporting, Colorado\", \n\t\t\"type\": \"city\", \n\t\t\"c\":
+        \"US\",\n\t\t\"zmw\": \"80031.1.99999\",\n\t\t\"tz\": \"US3\",\n\t\t\"l\":
+        \"/q/locid:126924\",\n\t\t\"ll\": \"39.860001 -105.059998\",\n\t\t\"lat\":
+        \"39.860001\",\n\t\t\"lon\": \"-105.059998\"\n\t}\n]\n}"
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 02:06:16 GMT
+- request:
+    method: get
+    uri: http://api.wunderground.com/api/XXX/conditions/q/zmw:80202.1.99999.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Creationtime:
+      - '0.064'
+      Last-Modified:
+      - Sun, 02 Nov 2014 02:06:17 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Sun, 02 Nov 2014 02:06:17 GMT
+      Cache-Control:
+      - max-age=0, no-cache
+      Pragma:
+      - no-cache
+      Date:
+      - Sun, 02 Nov 2014 02:06:17 GMT
+      Content-Length:
+      - '2588'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - DT=1414893977:21319:365-v3; path=/; expires=Fri, 01-Jan-2020 00:00:00 GMT;
+        domain=.wunderground.com
+    body:
+      encoding: UTF-8
+      string: "\n{\n  \"response\": {\n  \"version\":\"0.1\",\n  \"termsofService\":\"http://www.wunderground.com/weather/api/d/terms.html\",\n
+        \ \"features\": {\n  \"conditions\": 1\n  }\n\t}\n  ,\t\"current_observation\":
+        {\n\t\t\"image\": {\n\t\t\"url\":\"http://icons.wxug.com/graphics/wu2/logo_130x80.png\",\n\t\t\"title\":\"Weather
+        Underground\",\n\t\t\"link\":\"http://www.wunderground.com\"\n\t\t},\n\t\t\"display_location\":
+        {\n\t\t\"full\":\"Denver, CO\",\n\t\t\"city\":\"Denver\",\n\t\t\"state\":\"CO\",\n\t\t\"state_name\":\"Colorado\",\n\t\t\"country\":\"US\",\n\t\t\"country_iso3166\":\"US\",\n\t\t\"zip\":\"80202\",\n\t\t\"magic\":\"1\",\n\t\t\"wmo\":\"99999\",\n\t\t\"latitude\":\"39.74983978\",\n\t\t\"longitude\":\"-104.99559784\",\n\t\t\"elevation\":\"1600.00000000\"\n\t\t},\n\t\t\"observation_location\":
+        {\n\t\t\"full\":\"West Highland, Denver, Colorado\",\n\t\t\"city\":\"West
+        Highland, Denver\",\n\t\t\"state\":\"Colorado\",\n\t\t\"country\":\"US\",\n\t\t\"country_iso3166\":\"US\",\n\t\t\"latitude\":\"39.768597\",\n\t\t\"longitude\":\"-105.026672\",\n\t\t\"elevation\":\"5377
+        ft\"\n\t\t},\n\t\t\"estimated\": {\n\t\t},\n\t\t\"station_id\":\"KCODENVE86\",\n\t\t\"observation_time\":\"Last
+        Updated on November 1, 8:05 PM MDT\",\n\t\t\"observation_time_rfc822\":\"Sat,
+        01 Nov 2014 20:05:17 -0600\",\n\t\t\"observation_epoch\":\"1414893917\",\n\t\t\"local_time_rfc822\":\"Sat,
+        01 Nov 2014 20:06:17 -0600\",\n\t\t\"local_epoch\":\"1414893977\",\n\t\t\"local_tz_short\":\"MDT\",\n\t\t\"local_tz_long\":\"America/Denver\",\n\t\t\"local_tz_offset\":\"-0600\",\n\t\t\"weather\":\"Partly
+        Cloudy\",\n\t\t\"temperature_string\":\"53.4 F (11.9 C)\",\n\t\t\"temp_f\":53.4,\n\t\t\"temp_c\":11.9,\n\t\t\"relative_humidity\":\"55%\",\n\t\t\"wind_string\":\"Calm\",\n\t\t\"wind_dir\":\"North\",\n\t\t\"wind_degrees\":-999,\n\t\t\"wind_mph\":0.0,\n\t\t\"wind_gust_mph\":0,\n\t\t\"wind_kph\":0,\n\t\t\"wind_gust_kph\":0,\n\t\t\"pressure_mb\":\"1007\",\n\t\t\"pressure_in\":\"29.75\",\n\t\t\"pressure_trend\":\"+\",\n\t\t\"dewpoint_string\":\"38
+        F (3 C)\",\n\t\t\"dewpoint_f\":38,\n\t\t\"dewpoint_c\":3,\n\t\t\"heat_index_string\":\"NA\",\n\t\t\"heat_index_f\":\"NA\",\n\t\t\"heat_index_c\":\"NA\",\n\t\t\"windchill_string\":\"NA\",\n\t\t\"windchill_f\":\"NA\",\n\t\t\"windchill_c\":\"NA\",\n\t\t\"feelslike_string\":\"53.4
+        F (11.9 C)\",\n\t\t\"feelslike_f\":\"53.4\",\n\t\t\"feelslike_c\":\"11.9\",\n\t\t\"visibility_mi\":\"10.0\",\n\t\t\"visibility_km\":\"16.1\",\n\t\t\"solarradiation\":\"0\",\n\t\t\"UV\":\"0.0\",\"precip_1hr_string\":\"0.00
+        in ( 0 mm)\",\n\t\t\"precip_1hr_in\":\"0.00\",\n\t\t\"precip_1hr_metric\":\"
+        0\",\n\t\t\"precip_today_string\":\"0.00 in (0 mm)\",\n\t\t\"precip_today_in\":\"0.00\",\n\t\t\"precip_today_metric\":\"0\",\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif\",\n\t\t\"forecast_url\":\"http://www.wunderground.com/US/CO/Denver.html\",\n\t\t\"history_url\":\"http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KCODENVE86\",\n\t\t\"ob_url\":\"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=39.768597,-105.026672\",\n\t\t\"nowcast\":\"\"\n\t}\n}\n"
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 02:06:17 GMT
+recorded_with: VCR 2.9.3

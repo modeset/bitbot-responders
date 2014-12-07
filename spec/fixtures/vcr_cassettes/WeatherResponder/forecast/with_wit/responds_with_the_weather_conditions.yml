@@ -1,0 +1,204 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what's%20the%20forecast%20for%20anchorage%20alaska?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '353'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 02:10:11 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "a2131b06-91cf-4abb-a68f-87ebc4719346",
+          "_text" : "what's the forecast for anchorage alaska?",
+          "outcomes" : [ {
+            "_text" : "what's the forecast for anchorage alaska?",
+            "intent" : "weather_forecast",
+            "entities" : {
+              "location" : [ {
+                "value" : "anchorage alaska"
+              } ]
+            },
+            "confidence" : 0.999
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 02:10:11 GMT
+- request:
+    method: get
+    uri: http://autocomplete.wunderground.com/aq?query=anchorage%20alaska
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '269'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \"RESULTS\": [\n\t{\n\t\t\"name\": \"Anchorage, Alaska\", \n\t\t\"type\":
+        \"city\", \n\t\t\"c\": \"US\",\n\t\t\"zmw\": \"99501.1.99999\",\n\t\t\"tz\":
+        \"America/Anchorage\",\n\t\t\"tzs\": \"AKDT\",\n\t\t\"l\": \"/q/zmw:99501.1.99999\",\n\t\t\"ll\":
+        \"61.215748 -149.868942\",\n\t\t\"lat\": \"61.215748\",\n\t\t\"lon\": \"-149.868942\"\n\t}\n]\n}"
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 02:10:11 GMT
+- request:
+    method: get
+    uri: http://api.wunderground.com/api/XXX/forecast/q/zmw:99501.1.99999.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Creationtime:
+      - '0.035'
+      Last-Modified:
+      - Sun, 02 Nov 2014 02:10:12 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Sun, 02 Nov 2014 02:10:12 GMT
+      Cache-Control:
+      - max-age=0, no-cache
+      Pragma:
+      - no-cache
+      Date:
+      - Sun, 02 Nov 2014 02:10:12 GMT
+      Content-Length:
+      - '7230'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - DT=1414894212:2982:365-z3; path=/; expires=Fri, 01-Jan-2020 00:00:00 GMT;
+        domain=.wunderground.com
+    body:
+      encoding: UTF-8
+      string: "\n{\n  \"response\": {\n  \"version\":\"0.1\",\n  \"termsofService\":\"http://www.wunderground.com/weather/api/d/terms.html\",\n
+        \ \"features\": {\n  \"forecast\": 1\n  }\n\t}\n\t\t,\n\t\"forecast\":{\n\t\t\"txt_forecast\":
+        {\n\t\t\"date\":\"4:15 PM AKDT\",\n\t\t\"forecastday\": [\n\t\t{\n\t\t\"period\":0,\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/partlycloudy.gif\",\n\t\t\"title\":\"Saturday\",\n\t\t\"fcttext\":\"Partly
+        cloudy. Lows overnight in the upper 20s.\",\n\t\t\"fcttext_metric\":\"Partly
+        cloudy. Low -2C.\",\n\t\t\"pop\":\"10\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":1,\n\t\t\"icon\":\"nt_partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif\",\n\t\t\"title\":\"Saturday
+        Night\",\n\t\t\"fcttext\":\"Partly cloudy skies. Low 29F. Winds light and
+        variable.\",\n\t\t\"fcttext_metric\":\"Partly cloudy. Low -2C. Winds light
+        and variable.\",\n\t\t\"pop\":\"10\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":2,\n\t\t\"icon\":\"cloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/cloudy.gif\",\n\t\t\"title\":\"Sunday\",\n\t\t\"fcttext\":\"Cloudy.
+        High near 35F. Winds light and variable.\",\n\t\t\"fcttext_metric\":\"Cloudy
+        skies. High 2C. Winds light and variable.\",\n\t\t\"pop\":\"20\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":3,\n\t\t\"icon\":\"nt_partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif\",\n\t\t\"title\":\"Sunday
+        Night\",\n\t\t\"fcttext\":\"A few clouds from time to time. Low 27F. Winds
+        light and variable.\",\n\t\t\"fcttext_metric\":\"A few clouds from time to
+        time. Low -3C. Winds light and variable.\",\n\t\t\"pop\":\"20\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":4,\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/partlycloudy.gif\",\n\t\t\"title\":\"Monday\",\n\t\t\"fcttext\":\"Considerable
+        clouds early. Some decrease in clouds later in the day. High near 35F. Winds
+        NNE at 5 to 10 mph.\",\n\t\t\"fcttext_metric\":\"Mostly cloudy skies early
+        will become partly cloudy later in the day. High 1C. Winds light and variable.\",\n\t\t\"pop\":\"20\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":5,\n\t\t\"icon\":\"nt_partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif\",\n\t\t\"title\":\"Monday
+        Night\",\n\t\t\"fcttext\":\"A few clouds from time to time. Low 23F. Winds
+        light and variable.\",\n\t\t\"fcttext_metric\":\"A few clouds from time to
+        time. Low near -5C. Winds light and variable.\",\n\t\t\"pop\":\"0\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":6,\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/partlycloudy.gif\",\n\t\t\"title\":\"Tuesday\",\n\t\t\"fcttext\":\"Partly
+        cloudy. High 33F. Winds light and variable.\",\n\t\t\"fcttext_metric\":\"Intervals
+        of clouds and sunshine. High around 0C. Winds light and variable.\",\n\t\t\"pop\":\"0\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":7,\n\t\t\"icon\":\"nt_mostlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_mostlycloudy.gif\",\n\t\t\"title\":\"Tuesday
+        Night\",\n\t\t\"fcttext\":\"Mostly cloudy. Low 27F. Winds light and variable.\",\n\t\t\"fcttext_metric\":\"Considerable
+        cloudiness. Low -3C. Winds light and variable.\",\n\t\t\"pop\":\"0\"\n\t\t}\n\t\t]\n\t\t},\n\t\t\"simpleforecast\":
+        {\n\t\t\"forecastday\": [\n\t\t{\"date\":{\n\t\"epoch\":\"1414897200\",\n\t\"pretty\":\"7:00
+        PM AKDT on November 01, 2014\",\n\t\"day\":1,\n\t\"month\":11,\n\t\"year\":2014,\n\t\"yday\":304,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"1\",\n\t\"monthname\":\"November\",\n\t\"monthname_short\":\"Nov\",\n\t\"weekday_short\":\"Sat\",\n\t\"weekday\":\"Saturday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"AKDT\",\n\t\"tz_long\":\"America/Anchorage\"\n},\n\t\t\"period\":1,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"33\",\n\t\t\"celsius\":\"0\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"29\",\n\t\t\"celsius\":\"-2\"\n\t\t},\n\t\t\"conditions\":\"Partly
+        Cloudy\",\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/partlycloudy.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":10,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        null,\n\t\t\"mm\": null\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": null,\n\t\t\"cm\": null\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 9,\n\t\t\"kph\":
+        15,\n\t\t\"dir\": \"North\",\n\t\t\"degrees\": 0\n\t\t},\n\t\t\"avewind\":
+        {\n\t\t\"mph\": 4,\n\t\t\"kph\": 6,\n\t\t\"dir\": \"NE\",\n\t\t\"degrees\":
+        0\n\t\t},\n\t\t\"avehumidity\": 76,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\":
+        0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1414987200\",\n\t\"pretty\":\"7:00
+        PM AKST on November 02, 2014\",\n\t\"day\":2,\n\t\"month\":11,\n\t\"year\":2014,\n\t\"yday\":305,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"0\",\n\t\"monthname\":\"November\",\n\t\"monthname_short\":\"Nov\",\n\t\"weekday_short\":\"Sun\",\n\t\"weekday\":\"Sunday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"AKST\",\n\t\"tz_long\":\"America/Anchorage\"\n},\n\t\t\"period\":2,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"35\",\n\t\t\"celsius\":\"2\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"27\",\n\t\t\"celsius\":\"-3\"\n\t\t},\n\t\t\"conditions\":\"Overcast\",\n\t\t\"icon\":\"cloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/cloudy.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":20,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.01,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 10,\n\t\t\"kph\":
+        16,\n\t\t\"dir\": \"NE\",\n\t\t\"degrees\": 36\n\t\t},\n\t\t\"avewind\": {\n\t\t\"mph\":
+        5,\n\t\t\"kph\": 8,\n\t\t\"dir\": \"NE\",\n\t\t\"degrees\": 36\n\t\t},\n\t\t\"avehumidity\":
+        79,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\": 0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1415073600\",\n\t\"pretty\":\"7:00
+        PM AKST on November 03, 2014\",\n\t\"day\":3,\n\t\"month\":11,\n\t\"year\":2014,\n\t\"yday\":306,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"0\",\n\t\"monthname\":\"November\",\n\t\"monthname_short\":\"Nov\",\n\t\"weekday_short\":\"Mon\",\n\t\"weekday\":\"Monday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"AKST\",\n\t\"tz_long\":\"America/Anchorage\"\n},\n\t\t\"period\":3,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"35\",\n\t\t\"celsius\":\"2\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"23\",\n\t\t\"celsius\":\"-5\"\n\t\t},\n\t\t\"conditions\":\"Partly
+        Cloudy\",\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/partlycloudy.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":20,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 10,\n\t\t\"kph\":
+        16,\n\t\t\"dir\": \"NNE\",\n\t\t\"degrees\": 26\n\t\t},\n\t\t\"avewind\":
+        {\n\t\t\"mph\": 6,\n\t\t\"kph\": 10,\n\t\t\"dir\": \"NNE\",\n\t\t\"degrees\":
+        26\n\t\t},\n\t\t\"avehumidity\": 80,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\":
+        0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1415160000\",\n\t\"pretty\":\"7:00
+        PM AKST on November 04, 2014\",\n\t\"day\":4,\n\t\"month\":11,\n\t\"year\":2014,\n\t\"yday\":307,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"0\",\n\t\"monthname\":\"November\",\n\t\"monthname_short\":\"Nov\",\n\t\"weekday_short\":\"Tue\",\n\t\"weekday\":\"Tuesday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"AKST\",\n\t\"tz_long\":\"America/Anchorage\"\n},\n\t\t\"period\":4,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"33\",\n\t\t\"celsius\":\"1\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"27\",\n\t\t\"celsius\":\"-3\"\n\t\t},\n\t\t\"conditions\":\"Partly
+        Cloudy\",\n\t\t\"icon\":\"partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/partlycloudy.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":0,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 5,\n\t\t\"kph\":
+        8,\n\t\t\"dir\": \"ENE\",\n\t\t\"degrees\": 60\n\t\t},\n\t\t\"avewind\": {\n\t\t\"mph\":
+        3,\n\t\t\"kph\": 5,\n\t\t\"dir\": \"ENE\",\n\t\t\"degrees\": 60\n\t\t},\n\t\t\"avehumidity\":
+        73,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\": 0\n\t\t}\n\t\t]\n\t\t}\n\t}\n}\n"
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 02:10:12 GMT
+recorded_with: VCR 2.9.3

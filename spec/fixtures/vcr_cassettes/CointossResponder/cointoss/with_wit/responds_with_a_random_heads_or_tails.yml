@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=flip%20a%20coin%20for%20me.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer XXX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Version:
+      - 0.1.0
+      Content-Length:
+      - '227'
+      Server:
+      - http-kit
+      Date:
+      - Sun, 02 Nov 2014 01:53:37 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "1adb717f-1c62-4044-a56a-6fa9b25b59ba",
+          "_text" : "flip a coin for me.",
+          "outcomes" : [ {
+            "_text" : "flip a coin for me.",
+            "intent" : "cointoss",
+            "entities" : { },
+            "confidence" : 0.982
+          } ]
+        }
+    http_version: 
+  recorded_at: Sun, 02 Nov 2014 01:53:37 GMT
+recorded_with: VCR 2.9.3

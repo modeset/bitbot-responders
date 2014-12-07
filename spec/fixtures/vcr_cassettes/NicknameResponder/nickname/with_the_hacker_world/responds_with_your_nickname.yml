@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://mess.be/inickgenhacker.php
+    body:
+      encoding: US-ASCII
+      string: realname=archer
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - mess.be
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Nov 2014 22:53:30 GMT
+      Server:
+      - Apache/2.4.7 (Unix) OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4 PHP/5.4.26
+      X-Powered-By:
+      - PHP/5.4.26
+      Content-Length:
+      - '2947'
+      Connection:
+      - close
+      Content-Type:
+      - text/html
+    body:
+      encoding: UTF-8
+      string: "<html> \n<head> \n  <title>Elite Hacker Nickname for MSN Messenger
+        or other needs</title> \n<META NAME=\"keywords\" CONTENT=\"msn messenger nickname
+        msn nick hacker hacking leet l33t elite\">\n<META NAME=\"description\" CONTENT=\"Create
+        a personalized hacker nickname\">\n<link rel=\"stylesheet\" href=\"mess.css\"
+        type=\"text/css\">\n</head> \n<body bgcolor=\"#FFFFFF\">\n<p class=\"normalText\"><a
+        href=\"inews.htm\" target=\"_self\"><img src=\"_pictures/faqup.gif\" width=\"16\"
+        height=\"16\" border=\"0\" align=\"absbottom\"></a> Main/News &gt; <a href=\"inickgen.htm\"
+        target=\"main\">Nickname Generators</a> &gt; <b>MSN Messenger Hacker Nickname</b>
+        (you are here)</p>\n<p class=\"normalText\"> <img src=\"_pictures/msnduo.gif\"
+        width=\"19\" height=\"19\" align=\"absbottom\" alt=\"msn messenger nickname
+        hacker\"> <b>MSN HACKER NICKNAME CONSTRUCTION KIT</b></p>\n  <form action=\"/inickgenhacker.php\"
+        METHOD=\"POST\">\n  <p align=\"center\"><b class=\"normalText\"><img src=\"_pictures/inickgenhacker.gif\"
+        width=\"135\" height=\"150\" align=\"left\" alt=\"hacker nicknames\">Need
+        \n    a ultra l33t handle for your bad ass online hacking activity? Enter
+        your <span class=\"boldText\">full \n    name</span> and hit the &quot;hack
+        me&quot; button:<br>\n    </b><br>\n    <input type=\"text\" name=\"realname\"
+        size=25>\n    <input type=\"submit\" value=\"hack me\" name=\"Submit\">\n
+        \ </p>\n  </form> \n\n<p align=\"center\"> \n<center><p class='normalText'><b>archer</b>
+        tonight you will log in<br>and hack under the name of </center></p><center><p
+        class='normalText'><b>f1r3wAll\n phr34k\n</b></p></center><p align=\"center\">&nbsp;\n<p
+        align=\"center\">&nbsp;\n<p align=\"center\" class=\"normalText\"><b>More</b>
+        generators for original nicknames \n  <a href=\"inickgen.htm\" target=\"_self\"
+        class=\"noUnderlines\">here</a>...\n<p align=\"center\" class=\"normalText\"><!--
+        FASTCLICK.COM 468x60 v1.4 for mess.be -->\n<script language=\"Javascript\"><!--\nvar
+        i=j=p=t=u=x=z=dc='';var id=f=0;var f=Math.floor(Math.random()*7777);\nid=6164;
+        dc=document;u='ht'+'tp://media.fastclick.net/w'; x='/get.media?t=n';\nz='
+        width=468 height=60 border=0 ';t=z+'marginheight=0 marginwidth=';\ni=u+x+'&sid='+id+'&m=1&f=b&v=1.4&c='+f+'&r='+escape(dc.referrer);\nu='<a
+        \ hr'+'ef=\"'+u+'/click.here?sid='+id+'&m=1&c='+f+'\"  target=\"_blank\">';\ndc.writeln('<ifr'+'ame
+        src=\"'+i+'&d=f\"'+t+'0 hspace=0 vspace=0 frameborder=0 scrolling=no>');\nif(navigator.appName.indexOf('Mic')<=0){dc.writeln(u+'<img
+        src=\"'+i+'&d=n\"'+z+'></a>');}\ndc.writeln('</iframe>'); // --></script><noscript>\n<a
+        href=\"http://media.fastclick.net/w/click.here?sid=6164&m=1&c=1\"  target=\"_blank\">\n<img
+        src=\"http://media.fastclick.net/w/get.media?sid=6164&m=1&d=s&c=1&f=b&v=1.4\"\nwidth=468
+        height=60 border=1></a></noscript>\n<!-- FASTCLICK.COM 468x60 v1.4 for mess.be
+        --></p>\t\n<p align=\"center\"><b><font face=\"Verdana, Arial, Helvetica,
+        sans-serif\" size=\"2\" class=\"normalText\">HACKER NICKNAME CONSTRUCTION
+        KIT <i>&copy;</i> <i>Tim Jansen &amp; Dwergs (www.mess.be)<br>\n  </i>Photo
+        &copy; Copyright Warner Brothers</span></p>"
+    http_version: 
+  recorded_at: Sun, 09 Nov 2014 22:53:38 GMT
+recorded_with: VCR 2.9.3
