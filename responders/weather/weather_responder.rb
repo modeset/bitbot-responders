@@ -7,26 +7,33 @@ class WeatherResponder < Bitbot::Responder
   TOKEN = ENV['WUNDERGROUND_TOKEN']
 
   category 'Weather'
-  help 'weather:conditions <location>', description: 'Displays current conditions for a given location',
-    examples: ['Denver CO weather', 'weather for Denver CO', 'current conditions for Denver']
-  help 'weather:forecast <location>', description: 'Fetches a weather forecast for a given location',
-    examples: ['what\'s the forecast for Denver CO?', 'Denver CO forecast']
-  help 'weather:moon <location>', description: 'Displays the moon phase information for a given location',
-    examples: ['Denver CO moon', 'moon for Denver CO', 'moon phase for Denver']
+
+  help 'weather:conditions <location>',
+       description: 'Displays current conditions for a given location',
+       examples: ['Denver CO weather', 'weather for Denver CO', 'current conditions for Denver']
+
+  help 'weather:forecast <location>',
+       description: 'Fetches a weather forecast for a given location',
+       examples: ['what\'s the forecast for Denver CO?', 'Denver CO forecast']
+
+  help 'weather:moon <location>',
+       description: 'Displays the moon phase information for a given location',
+       examples: ['Denver CO moon', 'moon for Denver CO', 'moon phase for Denver']
 
   intent 'weather_conditions', :conditions, entities: { location: nil }
+  intent 'weather_forecast', :forecast, entities: { location: nil }
+  intent 'weather_moon', :moon, entities: { location: nil }
+
   route :conditions, /^weather:conditions\s?(.*)?$/ do |location|
     location, info = results_for(:conditions, location, 'current_observation')
     respond_with(conditions_message(info, location))
   end
 
-  intent 'weather_forecast', :forecast, entities: { location: nil }
   route :forecast, /^weather:forecast\s?(.*)?$/ do |location|
     location, info = results_for(:forecast, location, 'forecast/txt_forecast/forecastday')
     respond_with(forecast_message(info, location))
   end
 
-  intent 'weather_moon', :moon, entities: { location: nil }
   route :moon, /^weather:moon\s?(.*)?$/ do |location|
     location, info = results_for(:astronomy, location, 'moon_phase')
     respond_with(moon_phase_message(info, location))

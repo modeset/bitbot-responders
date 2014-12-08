@@ -2,10 +2,13 @@ class CardsAgainstHumanityResponder < Bitbot::Responder
   include Bitbot::Responder::Wit
 
   category 'Cards Against Humanity'
-  help 'misc:cards', description: 'Provides a random question and answer card.',
-    examples: ['cards against humanity.', 'give me some cards.']
+
+  help 'misc:cards',
+       description: 'Provides a random question and answer card.',
+       examples: ['cards against humanity.', 'give me some cards.']
 
   intent 'cah_cards', :cards
+
   route :cards, /^misc:cards$/i do
     question = question_card
     respond_with(attachments: [question, answer_cards_for(question)].flatten) do

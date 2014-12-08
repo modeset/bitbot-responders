@@ -2,10 +2,13 @@ class TimerResponder < Bitbot::Responder
   include Bitbot::Responder::Wit
 
   category 'General'
-  help 'general:timer <seconds>', description: 'Creates a timer that will alert you when it\'s done',
-    examples: ['set a timer for 4 minutes.', 'timebox this to 30 minutes.']
+
+  help 'general:timer <seconds>',
+       description: 'Creates a timer that will alert you when it\'s done',
+       examples: ['set a timer for 4 minutes.', 'timebox this to 30 minutes.']
 
   intent 'timer', :timer, entities: { duration: ->(e) { e['normalized']['value'] } }
+
   route :timer, /^general:timer\s?(\d+)?$/i do |seconds|
     seconds ||= 300
     seconds = seconds.to_i

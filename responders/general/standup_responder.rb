@@ -2,10 +2,13 @@ class StandupResponder < Bitbot::Responder
   include Bitbot::Responder::Wit
 
   category 'General'
-  help 'general:standup', description: 'Responds with list of what everyone is working on.',
-    examples: ['what are people working on?', 'what\'s @jejacks0n working on today?']
+
+  help 'general:standup',
+       description: 'Responds with list of what everyone is working on.',
+       examples: ['what are people working on?', 'what\'s @jejacks0n working on today?']
 
   intent 'standup_list', :standup_list, entities: {contact: nil}
+
   route :standup_list, /^general:standup\s?(.*)?$/i do |username|
     keys = connection.keys("bitbot:standup:#{username.to_s.empty? ? '*' : "#{username}:*"}")
     messages = keys.map { |key| Bitbot::Message.new(JSON.parse(connection.get(key))) }

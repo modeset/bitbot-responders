@@ -9,7 +9,7 @@ describe StatusResponder do
 
     it 'responds with a status message' do
       response = subject.respond_to(message)
-      expect(response[:text]).to eq("Heroku status:")
+      expect(response[:text]).to eq("Heroku status as reported:")
 
       attachments = response[:attachments]
       expect(attachments.length).to eq(3)
@@ -23,7 +23,7 @@ describe StatusResponder do
 
       it 'responds with a status message' do
         response = subject.respond_to(message)
-        expect(response[:text]).to eq("Heroku status:")
+        expect(response[:text]).to eq("Heroku status as reported:")
       end
 
     end
