@@ -16,43 +16,41 @@ class WeatherResponder < Bitbot::Responder
 
   intent 'weather_conditions', :conditions, entities: { location: nil }
   route :conditions, /^weather:conditions\s?(.*)?$/ do |location|
-    location = 'Denver CO' if location.to_s.empty?
-    location, response = results_for(:conditions, location)
-    info = response.fetch('current_observation')
-
+    location, info = results_for(:conditions, location, 'current_observation')
     respond_with(conditions_message(info, location))
   end
 
   intent 'weather_forecast', :forecast, entities: { location: nil }
   route :forecast, /^weather:forecast\s?(.*)?$/ do |location|
-    location = 'Denver CO' if location.to_s.empty?
-    location, response = results_for(:forecast, location)
-    info = response.fetch('forecast').fetch('txt_forecast').fetch('forecastday')
-
+    location, info = results_for(:forecast, location, 'forecast/txt_forecast/forecastday')
     respond_with(forecast_message(info, location))
   end
 
   intent 'weather_moon', :moon, entities: { location: nil }
   route :moon, /^weather:moon\s?(.*)?$/ do |location|
-    location = 'Denver CO' if location.to_s.empty?
-    location, response = results_for(:astronomy, location)
-    info = response.fetch('moon_phase')
-
+    location, info = results_for(:astronomy, location, 'moon_phase')
     respond_with(moon_phase_message(info, location))
   end
 
   private
 
-  def results_for(resource, location)
+  def results_for(resource, location, path = '')
+    location = 'Denver CO' if location.to_s.empty?
+
     url = "http://autocomplete.wunderground.com/aq?query=#{CGI.escape(location)}"
     json = JSON.parse(open(url).read)
     location_query = json['RESULTS'][0]['l']
     location_name = json['RESULTS'][0]['name']
 
     url = "http://api.wunderground.com/api/#{TOKEN}/#{resource}#{location_query}.json"
-    [location_name, JSON.parse(open(url).read)]
+    response = JSON.parse(open(url).read)
+
+    paths = path.split('/')
+    paths.each { |path_part| response = response.fetch(path_part) }
+
+    [location_name, response]
   rescue
-    raise(Bitbot::Response, "I was unable to find any locations from \"#{location}\".")
+    raise(Bitbot::Response, "I was unable to find any data for \"#{location}\".")
   end
 
   def conditions_message(info, location)
