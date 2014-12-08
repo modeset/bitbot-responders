@@ -28,4 +28,6 @@ VCR.configure do |c|
   c.ignore_localhost = true
   c.configure_rspec_metadata!
   c.default_cassette_options = { match_requests_on: [ :uri, :method ] }
+
+  c.ignore_hosts 'codeclimate.com'
 end
