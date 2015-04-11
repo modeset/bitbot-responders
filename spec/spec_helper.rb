@@ -22,7 +22,7 @@ Bitbot.configure do |config|
 end
 
 VCR.configure do |c|
-  c.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  c.cassette_library_dir = "spec/support/fixtures/vcr_cassettes"
   c.hook_into :webmock # or :fakeweb
   c.ignore_localhost = true
   c.configure_rspec_metadata!
