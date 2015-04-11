@@ -20,23 +20,17 @@ class WeatherResponder < Bitbot::Responder
        description: "Displays the moon phase information for a given location",
        examples: ["Denver CO moon", "moon for Denver CO", "moon phase for Denver"]
 
-  intent "weather_conditions", :conditions, entities: { location: nil }
-  intent "weather_forecast", :forecast, entities: { location: nil }
-  intent "weather_moon", :moon, entities: { location: nil }
+  {
+    conditions: ["current_observation"],
+    forecast:   ["forecast/txt_forecast/forecastday"],
+    moon:       ["moon_phase", :astronomy]
+  }.each do |method, (path, action)|
+    intent "weather_#{method}", method, entities: { location: nil }
 
-  route :conditions, /^weather:conditions\s?(.*)?$/ do |location|
-    location, info = results_for(:conditions, location, "current_observation")
-    respond_with(conditions_message(info, location))
-  end
-
-  route :forecast, /^weather:forecast\s?(.*)?$/ do |location|
-    location, info = results_for(:forecast, location, "forecast/txt_forecast/forecastday")
-    respond_with(forecast_message(info, location))
-  end
-
-  route :moon, /^weather:moon\s?(.*)?$/ do |location|
-    location, info = results_for(:astronomy, location, "moon_phase")
-    respond_with(moon_phase_message(info, location))
+    route method, /^weather:#{method}\s?(.*)?$/ do |location|
+      location, info = results_for(action || method, location, path)
+      respond_with(send("#{method}_message", info, location))
+    end
   end
 
   private
@@ -85,7 +79,7 @@ class WeatherResponder < Bitbot::Responder
     }
   end
 
-  def moon_phase_message(info, location)
+  def moon_message(info, location)
     phase = info["phaseofMoon"]
     emoji = t("weather.moons.#{phase.downcase.gsub(' ', '')}")
     {
