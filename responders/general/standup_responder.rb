@@ -1,13 +1,13 @@
 class StandupResponder < Bitbot::Responder
   include Bitbot::Responder::Wit
 
-  category 'General'
+  category "General"
 
-  help 'general:standup',
-       description: 'Responds with list of what everyone is working on.',
-       examples: ['what are people working on?', 'what\'s @jejacks0n working on today?']
+  help "general:standup",
+       description: "Responds with list of what everyone is working on.",
+       examples: ["what are people working on?", "what's @jejacks0n working on today?"]
 
-  intent 'standup_list', :standup_list, entities: {contact: nil}
+  intent "standup_list", :standup_list, entities: { contact: nil }
 
   route :standup_list, /^general:standup\s?(.*)?$/i do |username|
     keys = connection.keys("bitbot:standup:#{username.to_s.empty? ? '*' : "#{username}:*"}")
@@ -31,8 +31,7 @@ class StandupResponder < Bitbot::Responder
   end
 
   def tasks_for(messages)
-    fields = messages.map { |m| {title: m.user_name, value: m.task, short: false} }
-    {fallback: 'Unable to display on this client.', fields: fields}
+    fields = messages.map { |m| { title: m.user_name, value: m.task, short: false } }
+    { fallback: "Unable to display on this client.", fields: fields }
   end
-
 end

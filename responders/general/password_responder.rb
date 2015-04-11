@@ -1,17 +1,17 @@
-require 'open-uri'
+require "open-uri"
 
 class PasswordResponder < Bitbot::Responder
   include Bitbot::Responder::Wit
 
-  SERVICE = 'https://passwd.me/api/1.0'
+  SERVICE = "https://passwd.me/api/1.0"
 
-  category 'General'
+  category "General"
 
-  help 'general:password <length>',
-       description: 'Generates a readable password',
-       examples: ['I need a password.', 'generate a password for me.']
+  help "general:password <length>",
+       description: "Generates a readable password",
+       examples: ["I need a password.", "generate a password for me."]
 
-  intent 'password', :password, entities: { number: nil }
+  intent "password", :password, entities: { number: nil }
 
   route :password, /^general:password\s?(\d+)?$/i do |length|
     length ||= 32
@@ -27,10 +27,9 @@ class PasswordResponder < Bitbot::Responder
 
   def params(length)
     {
-      type: 'pronounceable',
+      type: "pronounceable",
       length: length,
-      charset: 'LOWERCASEALPHANUMERIC'
-    }.map { |k, v| "#{k}=#{v}" }.join('&')
+      charset: "LOWERCASEALPHANUMERIC"
+    }.map { |k, v| "#{k}=#{v}" }.join("&")
   end
-
 end

@@ -1,22 +1,24 @@
-GIT
-  remote: git://github.com/modeset/bitbot.git
-  revision: a21762d54d192daba6a5359ff1f2a3a4d2d7d90d
+PATH
+  remote: ../bitbot
   specs:
     bitbot (0.0.1)
-      activesupport (>= 4.1.6)
+      activesupport
       rack
       redis
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.1.8)
-      i18n (~> 0.6, >= 0.6.9)
+    activesupport (4.2.1)
+      i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.1)
+      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    ast (2.0.0)
+    astrolabe (1.3.0)
+      parser (>= 2.2.0.pre.3, < 3.0)
     codeclimate-test-reporter (0.4.3)
       simplecov (>= 0.7.1, < 1.0.0)
     crack (0.4.2)
@@ -25,14 +27,18 @@ GEM
     docile (1.1.5)
     fakeredis (0.5.0)
       redis (~> 3.0)
-    i18n (0.6.11)
-    json (1.8.1)
+    i18n (0.7.0)
+    json (1.8.2)
     mini_portile (0.6.0)
-    minitest (5.4.3)
+    minitest (5.5.1)
     multi_json (1.10.1)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
-    rack (1.5.2)
+    parser (2.2.0.3)
+      ast (>= 1.1, < 3.0)
+    powerpack (0.1.0)
+    rack (1.6.0)
+    rainbow (2.0.0)
     rake (10.4.2)
     redis (3.1.0)
     rspec (3.1.0)
@@ -47,13 +53,20 @@ GEM
     rspec-mocks (3.1.3)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
+    rubocop (0.30.0)
+      astrolabe (~> 1.3)
+      parser (>= 2.2.0.1, < 3.0)
+      powerpack (~> 0.1)
+      rainbow (>= 1.99.1, < 3.0)
+      ruby-progressbar (~> 1.4)
+    ruby-progressbar (1.7.5)
     safe_yaml (1.0.4)
     simplecov (0.9.1)
       docile (~> 1.1.0)
       multi_json (~> 1.0)
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
-    thread_safe (0.3.4)
+    thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     vcr (2.9.3)
@@ -74,6 +87,7 @@ DEPENDENCIES
   rake
   redis
   rspec
+  rubocop
   vcr
   webmock
   wit_ruby

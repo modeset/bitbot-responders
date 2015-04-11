@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wit.ai/message?q=what's%20the%208%20ball%20say%20about%20me%20getting%20laid%20tonight?
+    uri: https://api.wit.ai/message?q=what%27s%20the%208%20ball%20say%20about%20me%20getting%20laid%20tonight?
     body:
       encoding: US-ASCII
       string: ''

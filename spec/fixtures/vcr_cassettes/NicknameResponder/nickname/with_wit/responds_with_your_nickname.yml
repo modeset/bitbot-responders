@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wit.ai/message?q=what's%20my%20hacker%20nickname?
+    uri: https://api.wit.ai/message?q=what%27s%20my%20hacker%20nickname?
     body:
       encoding: US-ASCII
       string: ''

@@ -1,38 +1,39 @@
-require 'spec_helper'
-require_relative('../../responders/heroku/status_responder')
+require "spec_helper"
+require_relative("../../responders/heroku/status_responder")
 
 describe StatusResponder do
-  let(:message) { Bitbot::Message.new(text: text, user_name: 'archer') }
+  let(:message) { Bitbot::Message.new(text: text, user_name: "archer") }
 
-  describe 'status', vcr: true do
-    let(:text) { 'heroku:status' }
+  describe "status", vcr: true do
+    let(:text) { "heroku:status" }
 
-    it 'responds with a status message' do
+    it "responds with a status message" do
       response = subject.respond_to(message)
       expect(response[:text]).to eq("Heroku status as reported:")
 
       attachments = response[:attachments]
       expect(attachments.length).to eq(3)
-      expect(attachments[0][:text]).to eq('Production: green')
-      expect(attachments[1][:text]).to eq('Development: yellow')
-      expect(attachments[2][:text]).to eq("(unresolved) Issues provisioning log drains -- <https://status.heroku.com/incidents/682|read more>\n")
+      expect(attachments[0][:text]).to eq("Production: green")
+      expect(attachments[1][:text]).to eq("Development: yellow")
+      expect(attachments[2][:text]).to eq(
+        "(unresolved) Issues provisioning log drains -- <https://status.heroku.com/incidents/682|read more>\n"
+      )
     end
 
-    describe 'with wit', vcr: true do
-      let(:text) { 'status of heroku?' }
+    describe "with wit", vcr: true do
+      let(:text) { "status of heroku?" }
 
-      it 'responds with a status message' do
+      it "responds with a status message" do
         response = subject.respond_to(message)
         expect(response[:text]).to eq("Heroku status as reported:")
       end
-
     end
   end
 
-  describe 'issues', vcr: true do
-    let(:text) { 'heroku:issues' }
+  describe "issues", vcr: true do
+    let(:text) { "heroku:issues" }
 
-    it 'responds with the most recent 5 issues' do
+    it "responds with the most recent 5 issues" do
       response = subject.respond_to(message)
       expect(response[:text]).to eq("Okay archer, here are the most recent Heroku issues:")
 
@@ -46,14 +47,13 @@ describe StatusResponder do
       MSG
     end
 
-    describe 'with wit', vcr: true do
-      let(:text) { 'any issues with heroku?' }
+    describe "with wit", vcr: true do
+      let(:text) { "any issues with heroku?" }
 
-      it 'responds with the most recent 5 issues' do
+      it "responds with the most recent 5 issues" do
         response = subject.respond_to(message)
         expect(response[:text]).to eq("Okay archer, here are the most recent Heroku issues:")
       end
-
     end
   end
 end

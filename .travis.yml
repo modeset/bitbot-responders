@@ -1,5 +1,2 @@
-language: ruby
 rvm:
-  - 2.1.5
-before_install:
-- export CODECLIMATE_REPO_TOKEN=b9931f4f3a98adb232a79548c1686475c7b013590a68edf42907cda5ce928bfc
+  - 2.2.0

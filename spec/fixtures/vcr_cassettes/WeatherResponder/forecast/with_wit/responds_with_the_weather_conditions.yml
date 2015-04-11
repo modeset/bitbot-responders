@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wit.ai/message?q=what's%20the%20forecast%20for%20anchorage%20alaska?
+    uri: https://api.wit.ai/message?q=what%27s%20the%20forecast%20for%20anchorage%20alaska?
     body:
       encoding: US-ASCII
       string: ''
