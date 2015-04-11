@@ -1,6 +1,9 @@
 require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
 
+# require "simplecov"
+# SimpleCov.start
+
 ENV["WUNDERGROUND_TOKEN"] = "XXX"
 ENV["WIT_AI_TOKEN"] = "XXX"
 
@@ -11,12 +14,9 @@ require "fakeredis"
 require "vcr"
 require "webmock/rspec"
 
-I18n.default_locale = :en
-
 Bitbot.configure do |config|
   config.webhook_url = "http://localhost"
   config.redis_connection = Redis.new(url: "redis://127.0.0.1:6379")
-  puts Dir[File.expand_path("../../locale/*.yml", __FILE__)]
 
   config.locales = Dir[File.expand_path("../../locale/*.yml", __FILE__)]
 end

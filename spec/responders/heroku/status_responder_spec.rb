@@ -20,6 +20,18 @@ describe StatusResponder do
       )
     end
 
+    it "shows colors to indicate status" do
+      response = subject.respond_to(message)
+      expect(response[:text]).to eq("Heroku status as reported:")
+
+      attachments = response[:attachments]
+      expect(attachments.length).to eq(3)
+      expect(attachments[0][:text]).to eq("Production: red")
+      expect(attachments[0][:color]).to eq("#FF0000")
+      expect(attachments[1][:text]).to eq("Development: yellow")
+      expect(attachments[1][:color]).to eq("#FFD000")
+    end
+
     describe "with wit", vcr: true do
       let(:text) { "status of heroku?" }
 

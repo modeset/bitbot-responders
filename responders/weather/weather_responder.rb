@@ -84,10 +84,11 @@ class WeatherResponder < Bitbot::Responder
       fields << { title: info["title"], value: value, short: false }
     end
 
+    text = ":globe_with_meridians: Weather forecast for *#{location}*."
     {
-      text: ":globe_with_meridians: Weather forecast for *#{location}*.",
+      text: text,
       attachments: [
-        fallback: "Unable to display forecasts in this client.",
+        fallback: text,
         fields: fields
       ]
     }

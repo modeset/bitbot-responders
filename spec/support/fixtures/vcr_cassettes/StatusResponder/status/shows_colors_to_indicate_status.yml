@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://status.heroku.com/api/v3/current-status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 11 Apr 2015 21:54:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"c76c26b143534e5cae8ed2623e3ea84e"'
+      X-Request-Id:
+      - e72fc5108310e761643b5c88530fe737
+      X-Runtime:
+      - '0.012171'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":{"Production":"red","Development":"yellow"},"issues":[]}'
+    http_version: 
+  recorded_at: Sat, 11 Apr 2015 21:54:56 GMT
+recorded_with: VCR 2.9.3

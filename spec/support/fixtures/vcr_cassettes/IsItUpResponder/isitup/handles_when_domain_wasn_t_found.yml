@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://isitup.org/ello.co.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 11 Apr 2015 22:04:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de4438abd01441bcb90695ce243df25ee1428789854; expires=Sun, 10-Apr-16
+        22:04:14 GMT; path=/; domain=.isitup.org; HttpOnly
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - Is it up?/dac7c47 (earth.isitup.org)
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 1d59fc6cc09d117d-DFW
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+            "domain": "ello.co",
+            "port": 80,
+            "status_code": 3
+        }
+    http_version: 
+  recorded_at: Sat, 11 Apr 2015 22:04:14 GMT
+recorded_with: VCR 2.9.3

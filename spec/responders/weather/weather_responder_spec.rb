@@ -18,6 +18,14 @@ describe WeatherResponder do
       expect(attachment[:fields][1][:value]).to eq("37%")
     end
 
+    it "raises an exception if unable to determine the location" do
+      message.text += " FOO_BAR"
+      expect { subject.respond_to(message) }.to raise_error(
+        Bitbot::Response,
+        %{I was unable to find any data for "FOO_BAR".}
+      )
+    end
+
     describe "with wit" do
       let(:text) { "what are the weather conditions in Denver?" }
 
@@ -36,7 +44,7 @@ describe WeatherResponder do
       expect(response[:text]).to eq(":globe_with_meridians: Weather forecast for *Denver, Colorado*.")
 
       attachment = response[:attachments][0]
-      expect(attachment[:fallback]).to eq("Unable to display forecasts in this client.")
+      expect(attachment[:fallback]).to eq(":globe_with_meridians: Weather forecast for *Denver, Colorado*.")
       expect(attachment[:fields][0][:title]).to eq("Saturday")
       expect(attachment[:fields][0][:value]).to eq(":sunny: A few clouds. Lows overnight in the mid 40s.")
       expect(attachment[:fields][1][:title]).to eq("Sunday")
