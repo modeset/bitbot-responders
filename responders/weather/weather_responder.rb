@@ -42,18 +42,9 @@ class WeatherResponder < Bitbot::Responder
   private
 
   def results_for(resource, location, path = "")
-    location = "Denver CO" if location.to_s.empty?
-
-    url = "http://autocomplete.wunderground.com/aq?query=#{CGI.escape(location)}"
-    json = JSON.parse(open(url).read)
-    location_query = json["RESULTS"][0]["l"]
-    location_name = json["RESULTS"][0]["name"]
-
-    url = "http://api.wunderground.com/api/#{TOKEN}/#{resource}#{location_query}.json"
-    response = JSON.parse(open(url).read)
-
-    paths = path.split("/")
-    paths.each { |path_part| response = response.fetch(path_part) }
+    location_name, location_query = resolve_location(location)
+    response = JSON.parse(open("http://api.wunderground.com/api/#{TOKEN}/#{resource}#{location_query}.json").read)
+    path.split("/").each { |path_part| response = response.fetch(path_part) }
 
     [location_name, response]
   rescue
@@ -100,5 +91,13 @@ class WeatherResponder < Bitbot::Responder
     {
       text: "#{emoji} The moon is currently in the _#{phase}_ phase in *#{location}*."
     }
+  end
+
+  def resolve_location(location)
+    location = "Denver CO" if location.to_s.empty?
+
+    url = "http://autocomplete.wunderground.com/aq?query=#{CGI.escape(location)}"
+    json = JSON.parse(open(url).read)
+    [json["RESULTS"][0]["name"], json["RESULTS"][0]["l"]]
   end
 end
