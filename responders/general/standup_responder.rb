@@ -10,10 +10,7 @@ class StandupResponder < Bitbot::Responder
   intent "standup_list", :standup_list, entities: { contact: nil }
 
   route :standup_list, /^general:standup\s?(.*)?$/i do |username|
-    keys = connection.keys("bitbot:standup:#{username.to_s.empty? ? '*' : "#{username}:*"}")
-    messages = keys.map { |key| Bitbot::Message.new(JSON.parse(connection.get(key))) }
-
-    respond_with(attachments: [tasks_for(messages)]) do
+    respond_with(attachments: [tasks_for(username)]) do
       "Okay @#{message.user_name}, here's what's going on:"
     end
   end
@@ -30,7 +27,10 @@ class StandupResponder < Bitbot::Responder
     "bitbot:standup:#{message.user_name}:#{message.channel}:#{message.channel_id}:#{self.class.name}"
   end
 
-  def tasks_for(messages)
+  def tasks_for(username)
+    keys = connection.keys("bitbot:standup:#{username.to_s.empty? ? '*' : "#{username}:*"}")
+    messages = keys.map { |key| Bitbot::Message.new(JSON.parse(connection.get(key))) }
+
     fields = messages.map { |m| { title: m.user_name, value: m.task, short: false } }
     { fallback: "Unable to display on this client.", fields: fields }
   end
