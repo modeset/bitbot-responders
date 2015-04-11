@@ -1,5 +1,5 @@
 require "spec_helper"
-require_relative("../../responders/misc/zen_responder")
+require_relative("../../../responders/misc/zen_responder")
 
 describe ZenResponder do
   let(:message) { Bitbot::Message.new(text: text, user_name: "archer") }

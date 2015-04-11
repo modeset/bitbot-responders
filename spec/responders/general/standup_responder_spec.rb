@@ -1,5 +1,5 @@
 require "spec_helper"
-require_relative("../../responders/general/standup_responder")
+require_relative("../../../responders/general/standup_responder")
 
 describe StandupResponder do
   let(:message) { Bitbot::Message.new(text: text, user_name: "archer", channel: "isis", channel_id: "42") }

@@ -1,5 +1,5 @@
 require "spec_helper"
-require_relative("../../responders/misc/catfact_responder")
+require_relative("../../../responders/misc/catfact_responder")
 
 describe CatfactResponder do
   let(:message) { Bitbot::Message.new(text: text, user_name: "archer") }

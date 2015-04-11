@@ -1,5 +1,5 @@
 require "spec_helper"
-require_relative("../../responders/heroku/status_responder")
+require_relative("../../../responders/heroku/status_responder")
 
 describe StatusResponder do
   let(:message) { Bitbot::Message.new(text: text, user_name: "archer") }

@@ -1,5 +1,5 @@
 require "spec_helper"
-require_relative("../../responders/general/timer_responder")
+require_relative("../../../responders/general/timer_responder")
 
 describe TimerResponder do
   let(:message) { Bitbot::Message.new(text: text, user_name: "archer") }

@@ -1,5 +1,5 @@
 require "spec_helper"
-require_relative("../../responders/general/password_responder")
+require_relative("../../../responders/general/password_responder")
 
 describe PasswordResponder, vcr: true do
   let(:message) { Bitbot::Message.new(text: text, user_name: "archer") }

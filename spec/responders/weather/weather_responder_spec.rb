@@ -1,5 +1,5 @@
 require "spec_helper"
-require_relative("../../responders/weather/weather_responder")
+require_relative("../../../responders/weather/weather_responder")
 
 describe WeatherResponder do
   let(:message) { Bitbot::Message.new(text: text, user_name: "archer") }
